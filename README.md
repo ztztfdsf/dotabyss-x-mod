@@ -10,8 +10,10 @@
 
 - 官方 `jp.co.fanzagames.dotabyss_x_a` → 共存包名 `jp.co.fanzagames.dotabyss_x_a.mod`（可与官方包并装）
 - arm64-v8a only
-- 进程内挂载 .NET 运行时（LemonLoader = MelonLoader 安卓移植），加载 `AbyssMod.dll`（Harmony 补丁：剧情/UI 翻译、动态马赛克开关、语音中断、标题动画、Live2D 缩放等）
+- 进程内挂载 .NET 运行时（LemonLoader = MelonLoader 安卓移植），加载 `AbyssMod.dll`（Harmony 补丁：剧情/UI 翻译、语音中断、标题动画、Live2D 缩放等）
 - 游戏本体 `libil2cpp.so` / `libunity.so` / `global-metadata.dat` 与官方包逐字节一致，无代码注入
+
+> 关于去码：实测马赛克是**烤在原画/纹理里**的（Live2D 图集本体自带，非运行时后处理），mod 层面无法去除，请勿再提相关 issue。
 
 ## 版本
 
