@@ -32,11 +32,7 @@
 
 ## 翻译状态
 
-AbyssMod 的翻译 CDN（`anosu/dotabyss-translation`）已停止更新（上游死于 2026-10-19 前后）。本包运行时翻译加载策略：
-
-- CDN 404 时自动回退本地缓存（`.../files/MelonLoader/UserData/AbyssMod/translations/`）
-- 可在 `AbyssMod.cfg` 中设置 `PreferLocalFiles = true` 强制本地优先
-- 简体中文本地翻译包可由社区繁中镜像（`0BlueYan0/dotabyss-translation-zh_Hant`，原 anosu 布局）经 OpenCC t2s 转换得到；1.14.6 新增的 3 个剧情（evs_102000406017 / evs_102000407014 / evs_102000605016）暂无翻译
+AbyssMod 的翻译 CDN（`anosu/dotabyss-translation`）已停止更新（上游死于 2026-10-19 前后）。**本 APK 已内置全量简体中文翻译包**（1339 话剧情 + 86 张 MasterData 表 + names/ui_texts/static，约 17MB），由社区繁中镜像（`0BlueYan0/dotabyss-translation-zh_Hant`，原 anosu 布局）经 OpenCC t2s 转换得到，首启自动释放到本地并本地优先加载，无需任何额外操作。1.14.6 无未翻译的新增剧情。
 
 ## 安装
 
