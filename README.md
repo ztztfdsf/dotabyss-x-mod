@@ -4,12 +4,14 @@
 
 > ⚠️ 本仓库仅为技术存档与版本延续。使用第三方客户端登录线上服务存在账号风险，请自行评估。游戏本体请在 [DMM GAMES](https://games.dmm.com/) 正版渠道下载。
 
+**历史原发布处（1.14.4 时代，作者 anosu/Jitsu）**：<https://github.com/anosu/DMM-Mod/releases/tag/mod-dotabyss-v30> · 镜像站条目 <https://release.ntr.best/>（该线已停更）
+
 ## 这是什么
 
 对官方 APK 的整包重打包（repack），基于社区 mod 作者 Jitsu 的 AbyssMod v1.1.4（MelonLoader/LemonLoader 注入方案），随官方版本升级维护：
 
 - 官方 `jp.co.fanzagames.dotabyss_x_a` → 共存包名 `jp.co.fanzagames.dotabyss_x_a.mod`（可与官方包并装）
-- arm64-v8a only
+- arm64-v8a only · **Android 7.1+（minSdk 25 / targetSdk 36）**
 - 进程内挂载 .NET 运行时（LemonLoader = MelonLoader 安卓移植），加载 `AbyssMod.dll`（Harmony 补丁：剧情/UI 翻译、语音中断、标题动画、Live2D 缩放等）
 - 游戏本体 `libil2cpp.so` / `libunity.so` / `global-metadata.dat` 与官方包逐字节一致，无代码注入
 
@@ -25,6 +27,7 @@
 
 - 基线从官方 1.14.4 升级到 1.14.6 直连包（`global-metadata.dat` 两版本 md5 相同，旧 interop 代理与 mod DLL 直接沿用）
 - 内置启动 Toast 版本号同步为 1.14.6
+- 登录 WebView UA 与官方包对齐（去除 `.mod` 包名后缀，降低可观测差异）
 - 签名：自签名（`CN=AbyssMod Archive, O=ntr.best`）。**与 1.14.4 时代作者的 DMMMODKE 签名不同，无法覆盖安装旧 mod，需先卸载再装**；同样因为签名不同，本仓库各版本之间如更换签名链也需卸载重装
 
 ## 翻译状态
