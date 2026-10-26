@@ -27,7 +27,7 @@ using Il2CppTMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.5.0", "ztztfdsf")]
+[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.5.1", "ztztfdsf")]
 [assembly: MelonGame("EXNOA LLC.", "ドットアビスX for Android")]
 
 namespace UIDumpMod
@@ -45,7 +45,7 @@ namespace UIDumpMod
         /// 因此出现即视为日文。纯汉字 UI 标签(総合戦力/推奨戦力/浸食率/現在)靠它兜住。
         /// </summary>
         private static readonly char[] JpMarkerKanji =
-            "戦奨円満検絵価帰斉勲圧広遠間変険県続読済現際従様対処売歩沢淵減復費個獲昇断図鑑値伝会覚様".ToCharArray();
+            "戦奨円満検絵価帰斉勲圧広遠間変険県続読済現際従様対処売歩沢淵減復費個獲図鑑値伝覚".ToCharArray();
 
         private static bool NeedsTranslation(string s)
             => Japanese.IsMatch(s) || s.IndexOfAny(JpMarkerKanji) >= 0;

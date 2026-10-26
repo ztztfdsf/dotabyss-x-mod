@@ -27,9 +27,11 @@ import sys
 LEAK_RE = re.compile(r'\[LEAK\] ([^|]+)\|([^|]+)\|(.+)$')
 PLACEHOLDER = re.compile(r'\{(\d+)\}')
 
-# 内置日文判定: 与 UIDumpMod.Core.Japanese 一致
+# 内置日文判定: 与 UIDumpMod.Core.NeedsTranslation 一致 (假名 + 日式标记汉字)
+JP_MARKER = set("戦奨円満検絵価帰斉勲圧広遠間変険県続読済現際従様対処売歩沢淵減復費個獲図鑑値伝覚")
+
 def has_jp(s: str) -> bool:
-    return bool(re.search(r'[\u3040-\u309F\u30A1-\u30FA\u30FD\u30FE\u31F0-\u31FF\uFF66-\uFF9D]', s))
+    return bool(re.search(r'[\u3040-\u309F\u30A1-\u30FA\u30FD\u30FE\u31F0-\u31FF\uFF66-\uFF9D]', s)) or any(c in JP_MARKER for c in s)
 
 # 数字/日期动态文本模板: 日文原文模板 → 中文模板
 RULES = [
