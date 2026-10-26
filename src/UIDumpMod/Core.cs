@@ -27,7 +27,7 @@ using Il2CppTMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.4.0", "ztztfdsf")]
+[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.4.1", "ztztfdsf")]
 [assembly: MelonGame("EXNOA LLC.", "ドットアビスX for Android")]
 
 namespace UIDumpMod
@@ -181,6 +181,7 @@ namespace UIDumpMod
             if (t == null) return null;
             var stack = new List<string>();
             while (t != null) { stack.Add(t.name); t = t.parent; }
+            stack.Reverse(); // 收集时是子→父, 翻成父→子
             return string.Join("/", stack);
         }
 
