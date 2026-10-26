@@ -39,7 +39,9 @@ AbyssMod 的翻译 CDN（`anosu/dotabyss-translation`）已停止更新（上游
 |---|---|
 | 剧情（novels） | 1339 话全覆盖 |
 | MasterData 翻译表（static） | 150 张表 / 74000+ 条目（深渊 157 层、商店礼包、活动任务、职业、角色档案等全量） |
-| UI 硬编码文本（ui_texts） | 6083 条路径（全 UI 预制体提取补翻） |
+| UI 硬编码文本（ui_texts） | 6315 条路径（全 UI 预制体提取 + 运行时泄漏路径修复） |
+
+另含 **UIDumpMod** 运行时兜底翻译层：预制体相对路径与运行时路径（场景前缀 + `(Clone)` 后缀）不匹配导致的大量 UI 翻译失效，由该 mod 在运行时对齐修复（含数字模板与周期性全场景扫描），界面残留日文基本清零。
 | 角色名/专有名词（names） | 492 条 |
 
 基础译文来自社区繁中镜像（`0BlueYan0/dotabyss-translation-zh_Hant`，原 anosu 布局）经 OpenCC t2s 转换，MasterData/UI 缺口部分为本仓库人工补翻。
