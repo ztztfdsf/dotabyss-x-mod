@@ -27,7 +27,7 @@ using Il2CppTMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.4.1", "ztztfdsf")]
+[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.5.0", "ztztfdsf")]
 [assembly: MelonGame("EXNOA LLC.", "ドットアビスX for Android")]
 
 namespace UIDumpMod
@@ -39,6 +39,16 @@ namespace UIDumpMod
         /// <summary>判定「还需要翻译」的日文字符范围。故意排除全角长音ー与中点・(避免误伤已译中文)。</summary>
         private static readonly Regex Japanese = new Regex(
             @"[\u3040-\u309F\u30A1-\u30FA\u30FD\u30FE\u31F0-\u31FF\uFF66-\uFF9D]");
+
+        /// <summary>
+        /// 日式汉字标记(假名盲区补充): 这些字形是日文新字体/繁体, 我们的简中译文里不会出现,
+        /// 因此出现即视为日文。纯汉字 UI 标签(総合戦力/推奨戦力/浸食率/現在)靠它兜住。
+        /// </summary>
+        private static readonly char[] JpMarkerKanji =
+            "戦奨円満検絵価帰斉勲圧広遠間変険県続読済現際従様対処売歩沢淵減復費個獲昇断図鑑値伝会覚様".ToCharArray();
+
+        private static bool NeedsTranslation(string s)
+            => Japanese.IsMatch(s) || s.IndexOfAny(JpMarkerKanji) >= 0;
 
         /// <summary>{0} 占位符, 与 AbyssMod 的 UiTextPattern 模板语法一致。</summary>
         private static readonly Regex Placeholder = new Regex(@"\{(\d+)\}", RegexOptions.Compiled);
@@ -228,6 +238,91 @@ namespace UIDumpMod
             return false;
         }
 
+        // ---------- 碎片级翻译 ----------
+        //
+        // 深渊事件选项按钮的文本是运行时拼接的: <color=..>增益</color> + 换行 + <color=..>损耗</color>
+        // 整串查表永远 miss。这里把 color 标签之间的文本段拆开逐个翻译再重组,
+        // 覆盖任意增益/损耗组合(数据源: m_nether_floor_event_parts 的效果字段 + UI 格式串)。
+
+        private static readonly Regex ColorTag = new Regex("(<color=[^>]*>|</color>)", RegexOptions.Compiled);
+
+        /// <summary>碎片词汇表: 精确匹配的片段。</summary>
+        private static readonly Dictionary<string, string> FragGlossary = new Dictionary<string, string>
+        {
+            ["アビスコード獲得"] = "获得深渊代码",
+            ["アイテム獲得"] = "获得道具",
+            ["ナゾの鍵"] = "谜之钥匙",
+        };
+
+        /// <summary>代码系名称(恩恵ゲージ句式用)。</summary>
+        private static readonly Dictionary<string, string> CodeNames = new Dictionary<string, string>
+        {
+            ["インパクト"] = "冲击", ["ラッシュ"] = "突进", ["セーフ"] = "安全", ["リスク"] = "风险",
+        };
+
+        /// <summary>碎片规则: 正则模板片段。(顺序即优先级)</summary>
+        private static readonly (Regex rx, string tmpl)[] FragRules =
+        {
+            (new Regex(@"^アビスコイン(\d+)個?獲得$"),          "获得{0}深渊币"),
+            (new Regex(@"^アビスコイン(\d+)個消費$"),          "消耗{0}个深渊币"),
+            (new Regex(@"^HP(\d+)%回復$"),                     "HP恢复{0}%"),
+            (new Regex(@"^HP(\d+)%減少$"),                     "HP减少{0}%"),
+            (new Regex(@"^侵食([+-]?\d+)$"),                   "浸蚀{0}"),
+            (new Regex(@"^(インパクト|ラッシュ|セーフ|リスク)コード系統の恩恵ゲージが$"), "__CODE__"),
+            (new Regex(@"^し、(インパクト|ラッシュ|セーフ|リスク)コード系統の恩恵ゲージが$"), "，__CODE__"),
+            (new Regex(@"^(\d+)減少$"),                        "减少{0}"),
+            (new Regex(@"^(\d+)上昇$"),                        "上升{0}"),
+            (new Regex(@"^しました。$"),                        "。"),
+            (new Regex("^し、$"),                               "，"),
+            (new Regex("^,$"),                                  "，"),
+        };
+
+        /// <summary>翻译单个文本碎片(先词汇表后规则)。不含日文的片段原样返回。</summary>
+        private static bool TranslateFragment(string frag, out string result)
+        {
+            var core = frag.Trim();
+            result = frag;
+            if (core.Length == 0 || !NeedsTranslation(core)) return true; // 空白/非日文 → 原样
+            if (FragGlossary.TryGetValue(core, out var zh)) { result = zh; return true; }
+            foreach (var (rx, tmpl) in FragRules)
+            {
+                var m = rx.Match(core);
+                if (!m.Success) continue;
+                if (tmpl == "__CODE__" || tmpl == "，__CODE__")
+                {
+                    var name = CodeNames[m.Groups[1].Value];
+                    result = tmpl == "__CODE__" ? name + "代码系恩惠槽" : "，" + name + "代码系恩惠槽";
+                }
+                else
+                {
+                    var args = new string[m.Groups.Count - 1];
+                    for (int i = 1; i < m.Groups.Count; i++) args[i - 1] = m.Groups[i].Value;
+                    result = string.Format(tmpl, args);
+                }
+                return true;
+            }
+            return false; // 含日文但翻不出 → 整体放弃
+        }
+
+        /// <summary>组合文本碎片翻译: 拆 color 标签, 逐段翻译, 全部成功才重组。</summary>
+        public static bool TryFragments(string text, out string result)
+        {
+            result = null;
+            if (text == null || (text.IndexOf('<') < 0 && !NeedsTranslation(text))) return false;
+            var sb = new StringBuilder();
+            foreach (var part in ColorTag.Split(text))
+            {
+                if (part.Length == 0) continue;
+                if (part.StartsWith("<")) { sb.Append(part); continue; } // 标签原样
+                if (!TranslateFragment(part, out var zh)) return false;
+                sb.Append(zh);
+            }
+            var built = sb.ToString();
+            if (built == text) return false; // 没有任何变化
+            result = built;
+            return true;
+        }
+
         // ---------- 主管道 ----------
 
         /// <summary>hook 回调统一入口: 日文才处理, 先兜底翻译, 失败则报 [LEAK]。</summary>
@@ -238,10 +333,10 @@ namespace UIDumpMod
                 if (_applying) return;
                 if (!(comp is Component c)) return;
                 var text = (comp as TMP_Text)?.text ?? (comp as Text)?.text;
-                if (string.IsNullOrEmpty(text) || !Japanese.IsMatch(text)) return;
+                if (string.IsNullOrEmpty(text) || !NeedsTranslation(text)) return;
 
                 var path = PathOf(c.transform);
-                if (TryFallback(path, text, out var zh))
+                if (TryFallback(path, text, out var zh) || TryFragments(text, out zh))
                 {
                     _applying = true;
                     try
