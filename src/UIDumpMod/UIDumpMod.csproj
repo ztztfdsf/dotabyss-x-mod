@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>UIDumpMod</AssemblyName>
+    <RootNamespace>UIDumpMod</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <EnableDynamicLoading>false</EnableDynamicLoading>
+    <NoWarn>CS8632;CS0436;CS0618;CS8981</NoWarn>
+  </PropertyGroup>
+
+  <!--
+    引用路径指向 apktool 解码树里的 LemonLoader 运行时(loader net6 程序集 + interop 代理)。
+    换机器/换路径时在命令行覆盖, 不用改文件:
+      dotnet build -c Release -p:LoaderDir="..." -p:InteropDir="..."
+  -->
+  <PropertyGroup>
+    <LoaderDir Condition="'$(LoaderDir)'==''">$(MSBuildThisFileDirectory)..\official-dl.bin.out\assets\LemonLoader\runtime\loader\net6</LoaderDir>
+    <InteropDir Condition="'$(InteropDir)'==''">$(MSBuildThisFileDirectory)..\official-dl.bin.out\assets\LemonLoader\runtime\interop</InteropDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="MelonLoader"><HintPath>$(LoaderDir)\MelonLoader.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(LoaderDir)\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppInterop.Runtime"><HintPath>$(LoaderDir)\Il2CppInterop.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppInterop.Common"><HintPath>$(LoaderDir)\Il2CppInterop.Common.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppInterop.HarmonySupport"><HintPath>$(LoaderDir)\Il2CppInterop.HarmonySupport.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppProject"><HintPath>$(InteropDir)\Il2CppProject.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(InteropDir)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2Cppmscorlib"><HintPath>$(InteropDir)\Il2Cppmscorlib.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.TextMeshPro"><HintPath>$(InteropDir)\Unity.TextMeshPro.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UI"><HintPath>$(InteropDir)\UnityEngine.UI.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+</Project>
