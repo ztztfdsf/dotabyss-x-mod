@@ -22,12 +22,16 @@
 
 ```
 src/UIDumpMod/    UIDumpMod 源码（.NET 10，含构建说明与架构文档）
-tools/            leak2table.py — LEAK 日志 → ui_texts 补译维护工具
-docs/             UPDATE_SOP.md（版本更新六步流程）
+tools/            leak2table.py   — LEAK 日志 → ui_texts 补译维护工具
+                  glossary.py     — 专有名词一致性校验/统一工具
+                  glossary-fix.json — 人工确认的译名统一表
+docs/             GLOSSARY.md     — 专有名词对照表（唯一权威译名来源）
+                  glossary.json   — 同上，机器可读版
+                  UPDATE_SOP.md   — 版本更新六步流程
                   AbyssMod.decompiled.cs（原作者 mod 的反编译参考，只读）
 ```
 
-接手维护请先读 [`src/UIDumpMod/README.md`](src/UIDumpMod/README.md)（架构与踩坑记录）和 [`docs/UPDATE_SOP.md`](docs/UPDATE_SOP.md)。
+接手维护请先读 [`src/UIDumpMod/README.md`](src/UIDumpMod/README.md)（架构与踩坑记录）、[`docs/UPDATE_SOP.md`](docs/UPDATE_SOP.md)（版本更新流程）和 [`docs/GLOSSARY.md`](docs/GLOSSARY.md)（**译名唯一权威来源，改任何名字前先查这里**）。
 
 ## 翻译状态
 
@@ -38,18 +42,20 @@ AbyssMod 的翻译 CDN（`anosu/dotabyss-translation`）已停止更新（上游
 | 剧情（novels） | 1339 话全覆盖 |
 | MasterData 翻译表（static） | 150 张表 / 74000+ 条目（深渊 157 层、商店礼包、活动任务、职业、角色档案等全量） |
 | UI 硬编码文本（ui_texts） | 6422 条路径（全 UI 预制体提取 + 运行时泄漏路径滚动修复） |
-| 角色名/专有名词（names） | 492 条 |
+| 角色名/专有名词（names） | 492 条（译名统一规则见 [`docs/GLOSSARY.md`](docs/GLOSSARY.md)） |
 
 基础译文来自社区繁中镜像（`0BlueYan0/dotabyss-translation-zh_Hant`，原 anosu 布局）经 OpenCC t2s 转换（只转值不转 key），MasterData/UI 缺口部分为本仓库人工补翻。UI 残留日文的持续修复方法见 `tools/leak2table.py` 头部注释。
 
-> **斯卡雷特（スカーレット）剧情修复（v14）**：上游镜像把该角色 6 话（`107801*`，共 12 个文件 594 行）的译文整段填成了一部中国网络小说的正文，内容与日文原文完全无关。本仓库已将这 594 行**从日文原文全部重译**并替换，同时全量扫描确认其余 1327 话无同类问题。
+> **斯卡雷特（スカーレット）剧情修复（v15）**：上游镜像把该角色 6 话（`107801*`，共 12 个文件 594 行）的译文整段填成了一部中国网络小说的正文，内容与日文原文完全无关。本仓库已将这 594 行**从日文原文全部重译**并替换，同时全量扫描确认其余 1327 话无同类问题。
+>
+> **专有名词统一（v15）**：同一角色在旧包里存在多种译名（如 `スカーレット` 既有「斯卡蕾特」又有「斯卡雷特」、`アリシア` 有「艾莉西亚/阿莉西亚」）。已建立 [`docs/GLOSSARY.md`](docs/GLOSSARY.md) 作为唯一权威译名表，并全库统一 1400+ 处。规则：界面显示名以 `names` 表为准，正文/表/UI 必须与之一致。
 
 ## 版本
 
 | 版本 | 基线 | 说明 |
 |---|---|---|
-| 1.14.6 · mod v14 | 官方 1.14.6 (versionCode 31) | 纯翻译版：AbyssMod + UIDumpMod + 全量翻译包 + 斯卡雷特剧情重译修复 |
-| 1.14.6 · mod v13 | 官方 1.14.6 (versionCode 31) | 同 v14，但含上游斯卡雷特剧情的坏译文（已被 v14 取代，保留存档） |
+| 1.14.6 · mod v15 | 官方 1.14.6 (versionCode 31) | 纯翻译版：AbyssMod + UIDumpMod + 全量翻译包 + 斯卡雷特剧情重译 + 全库专名统一 |
+| 1.14.6 · mod v13 | 官方 1.14.6 (versionCode 31) | 含上游斯卡雷特剧情的坏译文与旧译名（已被 v15 取代，保留存档） |
 
 - 基线从官方 1.14.4 升级到 1.14.6 直连包（`global-metadata.dat` 两版本 md5 相同，旧 interop 代理与 mod DLL 直接沿用）
 - 内置启动 Toast 版本号同步为 1.14.6

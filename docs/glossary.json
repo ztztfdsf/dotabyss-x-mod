@@ -1,0 +1,3609 @@
+{
+  "お客": {
+    "occurrences": 585,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 564,
+        "zh": "客人"
+      }
+    ],
+    "zh": "顾客"
+  },
+  "アイシャ": {
+    "occurrences": 138,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 138,
+        "zh": "艾莎"
+      }
+    ],
+    "zh": "艾莎"
+  },
+  "アイナ": {
+    "occurrences": 130,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 128,
+        "zh": "爱娜"
+      }
+    ],
+    "zh": "爱娜"
+  },
+  "アウラ": {
+    "occurrences": 64,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 64,
+        "zh": "奥拉"
+      }
+    ],
+    "zh": "奥拉"
+  },
+  "アクア": {
+    "occurrences": 5,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 5,
+        "zh": "阿库娅"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "弗蕾娅"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "和阿库娅"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "娅和"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "弗蕾娅和阿库娅"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "是弗蕾娅"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "的歌"
+      }
+    ],
+    "zh": "阿库娅"
+  },
+  "アヤメ": {
+    "occurrences": 58,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 54,
+        "zh": "彩芽"
+      }
+    ],
+    "zh": "彩芽"
+  },
+  "アリシア": {
+    "occurrences": 359,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 351,
+        "zh": "艾莉西亚"
+      }
+    ],
+    "zh": "艾莉西亚"
+  },
+  "アーデルハイト": {
+    "occurrences": 175,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 173,
+        "zh": "阿德尔海德"
+      }
+    ],
+    "zh": "阿德尔海德"
+  },
+  "イオラ": {
+    "occurrences": 68,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 68,
+        "zh": "伊奥拉"
+      }
+    ],
+    "zh": "伊奥拉"
+  },
+  "イライザ": {
+    "occurrences": 145,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 140,
+        "zh": "伊莱莎"
+      }
+    ],
+    "zh": "伊莱莎"
+  },
+  "ウィステリア": {
+    "occurrences": 141,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 134,
+        "zh": "维斯特里娅"
+      }
+    ],
+    "zh": "维斯特里娅"
+  },
+  "ウェンディ": {
+    "occurrences": 242,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 237,
+        "zh": "温蒂"
+      }
+    ],
+    "zh": "温蒂"
+  },
+  "ウシトリブタ": {
+    "occurrences": 37,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 37,
+        "zh": "牛鸟猪"
+      }
+    ],
+    "zh": "牛鸟猪"
+  },
+  "ウパ": {
+    "occurrences": 59,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 56,
+        "zh": "乌帕"
+      }
+    ],
+    "zh": "乌帕"
+  },
+  "エアリエル": {
+    "occurrences": 183,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 177,
+        "zh": "埃阿莉艾尔"
+      }
+    ],
+    "zh": "埃阿莉艾尔"
+  },
+  "エティア": {
+    "occurrences": 149,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 144,
+        "zh": "埃蒂娅"
+      }
+    ],
+    "zh": "埃蒂娅"
+  },
+  "エミリー": {
+    "occurrences": 139,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 139,
+        "zh": "艾米莉"
+      }
+    ],
+    "zh": "艾米莉"
+  },
+  "エメルダ": {
+    "occurrences": 92,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 90,
+        "zh": "爱梅露达"
+      }
+    ],
+    "zh": "爱梅露达"
+  },
+  "エルドラーナ": {
+    "occurrences": 117,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 117,
+        "zh": "埃尔多拉纳"
+      },
+      {
+        "canonical": false,
+        "n": 35,
+        "zh": "埃尔多拉纳的"
+      }
+    ],
+    "zh": "埃尔多拉纳"
+  },
+  "エルミア": {
+    "occurrences": 66,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 64,
+        "zh": "埃露米娅"
+      }
+    ],
+    "zh": "埃露米娅"
+  },
+  "エレクトラ": {
+    "occurrences": 230,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 224,
+        "zh": "艾蕾克特拉"
+      }
+    ],
+    "zh": "艾蕾克特拉"
+  },
+  "オーナー": {
+    "occurrences": 73,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 62,
+        "zh": "老板"
+      }
+    ],
+    "zh": "老板"
+  },
+  "オーレリナ": {
+    "occurrences": 149,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 145,
+        "zh": "奥蕾莉娜"
+      }
+    ],
+    "zh": "奥蕾莉娜"
+  },
+  "カーラ": {
+    "occurrences": 72,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 66,
+        "zh": "卡拉"
+      }
+    ],
+    "zh": "卡拉"
+  },
+  "ガルバ": {
+    "occurrences": 5,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 5,
+        "zh": "加尔巴"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "司祭"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "毫不留情"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "的司祭"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "祭坛"
+      }
+    ],
+    "zh": "加尔巴"
+  },
+  "クリスティ": {
+    "occurrences": 99,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 99,
+        "zh": "克里斯蒂"
+      }
+    ],
+    "zh": "克里斯蒂"
+  },
+  "クルル": {
+    "occurrences": 761,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 748,
+        "zh": "库鲁鲁"
+      }
+    ],
+    "zh": "库鲁鲁"
+  },
+  "クレハ": {
+    "occurrences": 203,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 202,
+        "zh": "红叶"
+      }
+    ],
+    "zh": "红叶"
+  },
+  "クロエ": {
+    "occurrences": 115,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 112,
+        "zh": "克洛伊"
+      }
+    ],
+    "zh": "克洛伊"
+  },
+  "クー": {
+    "occurrences": 76,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 41,
+        "zh": "小库"
+      }
+    ],
+    "zh": "小库"
+  },
+  "グラディア": {
+    "occurrences": 125,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 122,
+        "zh": "格拉蒂娅"
+      }
+    ],
+    "zh": "格拉蒂娅"
+  },
+  "コトノ": {
+    "occurrences": 153,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 151,
+        "zh": "琴乃"
+      }
+    ],
+    "zh": "琴乃"
+  },
+  "ゴブリン": {
+    "occurrences": 57,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 57,
+        "zh": "哥布林"
+      }
+    ],
+    "zh": "哥布林"
+  },
+  "ゴブリンたち": {
+    "occurrences": 10,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 10,
+        "zh": "哥布林"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "撤退"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "妮娜"
+      }
+    ],
+    "zh": "哥布林们"
+  },
+  "ゴレイヌ": {
+    "occurrences": 53,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 52,
+        "zh": "戈雷努"
+      },
+      {
+        "canonical": false,
+        "n": 20,
+        "zh": "萝吉"
+      }
+    ],
+    "zh": "戈雷努"
+  },
+  "ゴーレム": {
+    "occurrences": 41,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 41,
+        "zh": "魔像"
+      }
+    ],
+    "zh": "魔像"
+  },
+  "サメ": {
+    "occurrences": 8,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 8,
+        "zh": "鲨鱼"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "把鲨鱼"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "鲨鱼轰"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "把鲨鱼轰"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "鲨鱼轰飞"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "那么"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "这种"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "什么"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "海的"
+      }
+    ],
+    "zh": "鲨鱼"
+  },
+  "シェリル": {
+    "occurrences": 60,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 60,
+        "zh": "谢莉尔"
+      }
+    ],
+    "zh": "谢莉尔"
+  },
+  "シエナ": {
+    "occurrences": 195,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 192,
+        "zh": "希耶娜"
+      }
+    ],
+    "zh": "希耶娜"
+  },
+  "シャオレイ": {
+    "occurrences": 125,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 117,
+        "zh": "小蕾"
+      }
+    ],
+    "zh": "小蕾"
+  },
+  "シャノン": {
+    "occurrences": 88,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 88,
+        "zh": "夏侬"
+      }
+    ],
+    "zh": "夏侬"
+  },
+  "シラエス": {
+    "occurrences": 195,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 195,
+        "zh": "希拉艾丝"
+      }
+    ],
+    "zh": "希拉艾丝"
+  },
+  "シルヴィア": {
+    "occurrences": 103,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 102,
+        "zh": "西尔维娅"
+      }
+    ],
+    "zh": "西尔维娅"
+  },
+  "ジェンマ": {
+    "occurrences": 103,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 101,
+        "zh": "杰玛"
+      }
+    ],
+    "zh": "杰玛"
+  },
+  "スカーレット": {
+    "occurrences": 112,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 109,
+        "zh": "斯卡蕾特"
+      }
+    ],
+    "zh": "斯卡蕾特"
+  },
+  "スタッフ": {
+    "occurrences": 10,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 9,
+        "zh": "工作"
+      },
+      {
+        "canonical": true,
+        "n": 8,
+        "zh": "工作人员"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "游乐园"
+      }
+    ],
+    "zh": "工作人员"
+  },
+  "スティーラ": {
+    "occurrences": 128,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 125,
+        "zh": "斯蒂拉"
+      }
+    ],
+    "zh": "斯蒂拉"
+  },
+  "ステミア": {
+    "occurrences": 128,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 114,
+        "zh": "斯特米娅"
+      }
+    ],
+    "zh": "斯特米娅"
+  },
+  "セイレーン": {
+    "occurrences": 25,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 25,
+        "zh": "塞壬"
+      },
+      {
+        "canonical": false,
+        "n": 9,
+        "zh": "塞壬的"
+      }
+    ],
+    "zh": "塞壬"
+  },
+  "セレスト": {
+    "occurrences": 87,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 87,
+        "zh": "塞蕾丝特"
+      }
+    ],
+    "zh": "塞蕾丝特"
+  },
+  "ソフィア": {
+    "occurrences": 263,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 258,
+        "zh": "索菲娅"
+      }
+    ],
+    "zh": "索菲娅"
+  },
+  "ダリア": {
+    "occurrences": 87,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 84,
+        "zh": "达莉亚"
+      }
+    ],
+    "zh": "达莉亚"
+  },
+  "テイマーたち": {
+    "occurrences": 5,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "驯兽师"
+      },
+      {
+        "canonical": true,
+        "n": 4,
+        "zh": "驯兽师们"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "怪物"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "兄妹俩"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "保琳娜"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "首领"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "们的"
+      }
+    ],
+    "zh": "驯兽师们"
+  },
+  "テルー": {
+    "occurrences": 129,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 125,
+        "zh": "特露"
+      }
+    ],
+    "zh": "特露"
+  },
+  "テルー親衛隊": {
+    "occurrences": 4,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 4,
+        "zh": "特露亲卫队"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "特露亲卫队的"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "我们"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "们是"
+      }
+    ],
+    "zh": "特露亲卫队"
+  },
+  "ディアーナ": {
+    "occurrences": 124,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 124,
+        "zh": "蒂亚娜"
+      }
+    ],
+    "zh": "蒂亚娜"
+  },
+  "ナイア": {
+    "occurrences": 292,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 291,
+        "zh": "奈亚"
+      }
+    ],
+    "zh": "奈亚"
+  },
+  "ニナ": {
+    "occurrences": 346,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 339,
+        "zh": "妮娜"
+      }
+    ],
+    "zh": "妮娜"
+  },
+  "ネズミ": {
+    "occurrences": 10,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 8,
+        "zh": "老鼠"
+      }
+    ],
+    "zh": "老鼠"
+  },
+  "ノエミ": {
+    "occurrences": 136,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 135,
+        "zh": "诺艾米"
+      }
+    ],
+    "zh": "诺艾米"
+  },
+  "ノワール": {
+    "occurrences": 85,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 84,
+        "zh": "诺瓦露"
+      },
+      {
+        "canonical": false,
+        "n": 25,
+        "zh": "菲露姆"
+      }
+    ],
+    "zh": "诺瓦露"
+  },
+  "ハチミツ": {
+    "occurrences": 37,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 28,
+        "zh": "哈基米"
+      }
+    ],
+    "zh": "哈基米"
+  },
+  "ハツネ": {
+    "occurrences": 116,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 114,
+        "zh": "初音"
+      }
+    ],
+    "zh": "初音"
+  },
+  "パウリーナ": {
+    "occurrences": 211,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 201,
+        "zh": "保琳娜"
+      }
+    ],
+    "zh": "保琳娜"
+  },
+  "ヒナギ": {
+    "occurrences": 164,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 163,
+        "zh": "雏菊"
+      }
+    ],
+    "zh": "雏菊"
+  },
+  "ヒマリ": {
+    "occurrences": 687,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 609,
+        "zh": "阳葵"
+      }
+    ],
+    "zh": "阳葵"
+  },
+  "ヒュメナ": {
+    "occurrences": 129,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 127,
+        "zh": "休美娜"
+      }
+    ],
+    "zh": "休美娜"
+  },
+  "ピコ": {
+    "occurrences": 142,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 139,
+        "zh": "皮可"
+      }
+    ],
+    "zh": "皮可"
+  },
+  "フィオナ": {
+    "occurrences": 205,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 199,
+        "zh": "菲奥娜"
+      }
+    ],
+    "zh": "菲奥娜"
+  },
+  "フィルム": {
+    "occurrences": 112,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 109,
+        "zh": "菲露姆"
+      }
+    ],
+    "zh": "菲露姆"
+  },
+  "フェイリン": {
+    "occurrences": 79,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 78,
+        "zh": "菲琳"
+      }
+    ],
+    "zh": "菲琳"
+  },
+  "フェリシオーネ": {
+    "occurrences": 55,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 54,
+        "zh": "菲莉希欧涅"
+      }
+    ],
+    "zh": "菲莉希欧涅"
+  },
+  "フェル": {
+    "occurrences": 317,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 317,
+        "zh": "菲尔"
+      },
+      {
+        "canonical": false,
+        "n": 133,
+        "zh": "菲尔图娜"
+      }
+    ],
+    "zh": "菲尔"
+  },
+  "フェルトゥーナ": {
+    "occurrences": 133,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 133,
+        "zh": "菲尔图娜"
+      }
+    ],
+    "zh": "菲尔图娜"
+  },
+  "フレア": {
+    "occurrences": 12,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 8,
+        "zh": "弗蕾娅"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "阿库娅"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "和阿库娅"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "火焰狐"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "娅和"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "弗蕾娅和阿库娅"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "的歌"
+      }
+    ],
+    "zh": "芙蕾尔"
+  },
+  "フレイヤ": {
+    "occurrences": 101,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 98,
+        "zh": "弗蕾娅"
+      }
+    ],
+    "zh": "弗蕾娅"
+  },
+  "フレデリカ": {
+    "occurrences": 165,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 162,
+        "zh": "弗蕾德莉卡"
+      }
+    ],
+    "zh": "弗蕾德莉卡"
+  },
+  "フードの男": {
+    "occurrences": 6,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 6,
+        "zh": "兜帽"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "那个"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "那个兜帽男"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "戴兜帽的男人"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "就是"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "灾厄"
+      }
+    ],
+    "zh": "兜帽男"
+  },
+  "ブローチ": {
+    "occurrences": 24,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 24,
+        "zh": "胸针"
+      },
+      {
+        "canonical": false,
+        "n": 9,
+        "zh": "那个"
+      }
+    ],
+    "zh": "胸针"
+  },
+  "ヘイリー": {
+    "occurrences": 269,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 268,
+        "zh": "海莉"
+      }
+    ],
+    "zh": "海莉"
+  },
+  "ベティ": {
+    "occurrences": 112,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 111,
+        "zh": "贝蒂"
+      }
+    ],
+    "zh": "贝蒂"
+  },
+  "ベリサ": {
+    "occurrences": 799,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 787,
+        "zh": "贝丽莎"
+      }
+    ],
+    "zh": "贝丽莎"
+  },
+  "ペルディオン": {
+    "occurrences": 167,
+    "source": "人工指定",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 163,
+        "zh": "佩尔迪翁"
+      },
+      {
+        "canonical": false,
+        "n": 52,
+        "zh": "佩尔迪翁的"
+      }
+    ],
+    "zh": "佩尔迪翁"
+  },
+  "ペルディオン警察": {
+    "occurrences": 4,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 4,
+        "zh": "佩尔迪翁警察"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "谢莉尔"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "就是"
+      }
+    ],
+    "zh": "佩尔迪翁警察"
+  },
+  "ホウライ": {
+    "occurrences": 56,
+    "source": "人工指定",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 56,
+        "zh": "蓬莱"
+      }
+    ],
+    "zh": "蓬莱"
+  },
+  "ホノカ": {
+    "occurrences": 297,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 291,
+        "zh": "穗香"
+      }
+    ],
+    "zh": "穗香"
+  },
+  "ホムンクルス": {
+    "occurrences": 34,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 34,
+        "zh": "人工生命体"
+      },
+      {
+        "canonical": false,
+        "n": 11,
+        "zh": "弗蕾德莉卡"
+      }
+    ],
+    "zh": "人工生命体"
+  },
+  "ポパパポパ": {
+    "occurrences": 65,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 65,
+        "zh": "波帕帕波帕"
+      },
+      {
+        "canonical": false,
+        "n": 25,
+        "zh": "菲奥娜"
+      }
+    ],
+    "zh": "波帕帕波帕"
+  },
+  "マックン": {
+    "occurrences": 75,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 74,
+        "zh": "玛昆"
+      }
+    ],
+    "zh": "玛昆"
+  },
+  "マニョリア": {
+    "occurrences": 171,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 171,
+        "zh": "玛尼奥莉娅"
+      }
+    ],
+    "zh": "玛尼奥莉娅"
+  },
+  "マリナ": {
+    "occurrences": 311,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 306,
+        "zh": "玛丽娜"
+      }
+    ],
+    "zh": "玛丽娜"
+  },
+  "マーガレット": {
+    "occurrences": 83,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 83,
+        "zh": "玛格丽特"
+      }
+    ],
+    "zh": "玛格丽特"
+  },
+  "ミコラ": {
+    "occurrences": 145,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 138,
+        "zh": "米可拉"
+      }
+    ],
+    "zh": "米可拉"
+  },
+  "ミミック": {
+    "occurrences": 16,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 16,
+        "zh": "宝箱怪"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "梅丽莎"
+      }
+    ],
+    "zh": "拟态怪"
+  },
+  "ミルティーユ": {
+    "occurrences": 141,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 140,
+        "zh": "米露蒂"
+      }
+    ],
+    "zh": "米露蒂"
+  },
+  "ミレスガルド": {
+    "occurrences": 86,
+    "source": "人工指定",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 85,
+        "zh": "米雷斯加德"
+      },
+      {
+        "canonical": false,
+        "n": 36,
+        "zh": "骑士"
+      }
+    ],
+    "zh": "米雷斯加德"
+  },
+  "メイベル": {
+    "occurrences": 179,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 148,
+        "zh": "梅贝尔"
+      }
+    ],
+    "zh": "梅贝尔"
+  },
+  "メリッサ": {
+    "occurrences": 96,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 96,
+        "zh": "梅丽莎"
+      }
+    ],
+    "zh": "梅丽莎"
+  },
+  "メレム": {
+    "occurrences": 82,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 77,
+        "zh": "梅蕾姆"
+      }
+    ],
+    "zh": "梅蕾姆"
+  },
+  "モンスター": {
+    "occurrences": 688,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 676,
+        "zh": "怪物"
+      }
+    ],
+    "zh": "怪物"
+  },
+  "モンスターたち": {
+    "occurrences": 46,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 45,
+        "zh": "怪物"
+      },
+      {
+        "canonical": true,
+        "n": 18,
+        "zh": "怪物们"
+      },
+      {
+        "canonical": false,
+        "n": 16,
+        "zh": "的怪物"
+      }
+    ],
+    "zh": "怪物们"
+  },
+  "ヤチヨ": {
+    "occurrences": 81,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 79,
+        "zh": "八千代"
+      }
+    ],
+    "zh": "八千代"
+  },
+  "ユーリ": {
+    "occurrences": 174,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 174,
+        "zh": "尤莉"
+      }
+    ],
+    "zh": "尤莉"
+  },
+  "ライム": {
+    "occurrences": 125,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 121,
+        "zh": "莱姆"
+      }
+    ],
+    "zh": "莱姆"
+  },
+  "ラモーナ": {
+    "occurrences": 138,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 131,
+        "zh": "拉莫娜"
+      }
+    ],
+    "zh": "拉莫娜"
+  },
+  "ラヴェリア": {
+    "occurrences": 137,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 133,
+        "zh": "拉维莉娅"
+      }
+    ],
+    "zh": "拉维莉娅"
+  },
+  "リエラ": {
+    "occurrences": 156,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 153,
+        "zh": "莉艾拉"
+      }
+    ],
+    "zh": "莉艾拉"
+  },
+  "リコリット": {
+    "occurrences": 148,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 142,
+        "zh": "莉可莉特"
+      }
+    ],
+    "zh": "莉可莉特"
+  },
+  "リタ": {
+    "occurrences": 79,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 78,
+        "zh": "莉塔"
+      }
+    ],
+    "zh": "莉塔"
+  },
+  "ルカ": {
+    "occurrences": 109,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 98,
+        "zh": "露卡"
+      }
+    ],
+    "zh": "露卡"
+  },
+  "ルシータ": {
+    "occurrences": 131,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 130,
+        "zh": "露西塔"
+      }
+    ],
+    "zh": "露西塔"
+  },
+  "ルディア": {
+    "occurrences": 260,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 257,
+        "zh": "露迪亚"
+      }
+    ],
+    "zh": "露迪亚"
+  },
+  "レイゼリア": {
+    "occurrences": 100,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 100,
+        "zh": "蕾泽莉亚"
+      },
+      {
+        "canonical": false,
+        "n": 73,
+        "zh": "蕾泽莉亚大人"
+      }
+    ],
+    "zh": "蕾泽莉亚"
+  },
+  "レヴィエーヌ": {
+    "occurrences": 176,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 171,
+        "zh": "莱薇恩"
+      }
+    ],
+    "zh": "莱薇恩"
+  },
+  "ロジー": {
+    "occurrences": 45,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 42,
+        "zh": "萝吉"
+      },
+      {
+        "canonical": false,
+        "n": 20,
+        "zh": "戈雷努"
+      }
+    ],
+    "zh": "萝吉"
+  },
+  "ローザ": {
+    "occurrences": 90,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 87,
+        "zh": "罗莎"
+      }
+    ],
+    "zh": "罗莎"
+  },
+  "ヴィーラ": {
+    "occurrences": 290,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 288,
+        "zh": "维拉"
+      }
+    ],
+    "zh": "维拉"
+  },
+  "ヴェスペラ": {
+    "occurrences": 134,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 132,
+        "zh": "维斯佩拉"
+      }
+    ],
+    "zh": "维斯佩拉"
+  },
+  "一同": {
+    "occurrences": 10,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "众人"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "一行人"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "好了"
+      }
+    ],
+    "zh": "全体"
+  },
+  "上司": {
+    "occurrences": 16,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 16,
+        "zh": "上司"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "的上司"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "独家"
+      }
+    ],
+    "zh": "上司"
+  },
+  "主人公": {
+    "occurrences": 3,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "的主人公"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "黑暗"
+      }
+    ],
+    "zh": "主人公"
+  },
+  "主催者": {
+    "occurrences": 11,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 8,
+        "zh": "主办者"
+      }
+    ],
+    "zh": "主办者"
+  },
+  "二人": {
+    "occurrences": 20,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 9,
+        "zh": "两个"
+      },
+      {
+        "canonical": false,
+        "n": 7,
+        "zh": "个人"
+      },
+      {
+        "canonical": false,
+        "n": 6,
+        "zh": "两个人"
+      },
+      {
+        "canonical": true,
+        "n": 6,
+        "zh": "两人"
+      },
+      {
+        "canonical": false,
+        "n": 6,
+        "zh": "一起"
+      }
+    ],
+    "zh": "两人"
+  },
+  "付き人": {
+    "occurrences": 5,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 3,
+        "zh": "随从"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "跟你说了什么"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "前线基地"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "昨天那"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "那位前"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "前随从"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "是我"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "管家"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "如此"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "宰相"
+      }
+    ],
+    "zh": "随从"
+  },
+  "使者": {
+    "occurrences": 9,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 9,
+        "zh": "使者"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "的使者"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "学院"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "正在"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "司令"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "海中的黑暗使者"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "学院的使者"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "海兽迷彩"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "使者正在"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "使者来"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "司令官"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "逃脱"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "急忙"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "就是"
+      }
+    ],
+    "zh": "使者"
+  },
+  "傭兵": {
+    "occurrences": 19,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 18,
+        "zh": "佣兵"
+      },
+      {
+        "canonical": false,
+        "n": 6,
+        "zh": "的佣兵"
+      }
+    ],
+    "zh": "佣兵"
+  },
+  "傭兵たち": {
+    "occurrences": 3,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "佣兵"
+      },
+      {
+        "canonical": true,
+        "n": 2,
+        "zh": "佣兵们"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "年轻"
+      }
+    ],
+    "zh": "佣兵们"
+  },
+  "兵士": {
+    "occurrences": 324,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 304,
+        "zh": "士兵"
+      },
+      {
+        "canonical": false,
+        "n": 120,
+        "zh": "士兵们"
+      }
+    ],
+    "zh": "士兵"
+  },
+  "兵士たち": {
+    "occurrences": 111,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 109,
+        "zh": "士兵"
+      },
+      {
+        "canonical": true,
+        "n": 84,
+        "zh": "士兵们"
+      }
+    ],
+    "zh": "士兵们"
+  },
+  "刺客": {
+    "occurrences": 13,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 13,
+        "zh": "刺客"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "是刺客"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "米可拉"
+      }
+    ],
+    "zh": "刺客"
+  },
+  "前線基地の兵士": {
+    "occurrences": 6,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 6,
+        "zh": "前线基地的士兵"
+      }
+    ],
+    "zh": "前线基地士兵"
+  },
+  "参加者たち": {
+    "occurrences": 3,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "参加者"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "者们"
+      }
+    ],
+    "zh": "参赛者们"
+  },
+  "司祭": {
+    "occurrences": 24,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 17,
+        "zh": "司祭"
+      },
+      {
+        "canonical": false,
+        "n": 7,
+        "zh": "的司祭"
+      },
+      {
+        "canonical": false,
+        "n": 7,
+        "zh": "祭司"
+      },
+      {
+        "canonical": false,
+        "n": 7,
+        "zh": "教祖"
+      }
+    ],
+    "zh": "司祭"
+  },
+  "同僚": {
+    "occurrences": 14,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 11,
+        "zh": "同僚"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "的同"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "那个"
+      }
+    ],
+    "zh": "同事"
+  },
+  "商人": {
+    "occurrences": 104,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 99,
+        "zh": "商人"
+      }
+    ],
+    "zh": "商人"
+  },
+  "大型モンスター": {
+    "occurrences": 4,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 4,
+        "zh": "大型怪物"
+      }
+    ],
+    "zh": "大型怪物"
+  },
+  "女の子": {
+    "occurrences": 142,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 115,
+        "zh": "女孩"
+      },
+      {
+        "canonical": false,
+        "n": 92,
+        "zh": "女孩子"
+      }
+    ],
+    "zh": "女孩"
+  },
+  "女兵士": {
+    "occurrences": 8,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 8,
+        "zh": "女兵"
+      },
+      {
+        "canonical": false,
+        "n": 6,
+        "zh": "女兵士"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "的女兵"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "来的"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "尤莉"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "来的女兵士"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "起来的"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "司令官"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "雪的"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "出来"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "钓起"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "骇人"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "说道"
+      }
+    ],
+    "zh": "女士兵"
+  },
+  "女性の声": {
+    "occurrences": 4,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "声音"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "的声音"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "女人"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "东西"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "个女"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "那个"
+      }
+    ],
+    "zh": "女性声音"
+  },
+  "娼婦": {
+    "occurrences": 54,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 47,
+        "zh": "娼妇"
+      }
+    ],
+    "zh": "娼妇"
+  },
+  "娼婦たち": {
+    "occurrences": 3,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 2,
+        "zh": "娼妇们"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "们的"
+      }
+    ],
+    "zh": "娼妇们"
+  },
+  "子供": {
+    "occurrences": 28,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 19,
+        "zh": "孩子"
+      },
+      {
+        "canonical": false,
+        "n": 11,
+        "zh": "小孩"
+      }
+    ],
+    "zh": "小孩子"
+  },
+  "子供たち": {
+    "occurrences": 7,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 7,
+        "zh": "孩子"
+      },
+      {
+        "canonical": true,
+        "n": 6,
+        "zh": "孩子们"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "孩子们玩"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "陪孩子们玩"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "的孩子们"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "起来"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "您的"
+      }
+    ],
+    "zh": "孩子们"
+  },
+  "子熊": {
+    "occurrences": 15,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 14,
+        "zh": "小熊"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "米露蒂"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "蛋挞"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "了一"
+      }
+    ],
+    "zh": "小熊"
+  },
+  "子犬": {
+    "occurrences": 7,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 7,
+        "zh": "小狗"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "库鲁鲁"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "一只小狗"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "著一"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "抱著"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "小小"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "轻轻"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "一声"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "的腿"
+      }
+    ],
+    "zh": "小狗"
+  },
+  "客": {
+    "occurrences": 1592,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 1445,
+        "zh": "客人"
+      }
+    ],
+    "zh": "客人"
+  },
+  "客たち": {
+    "occurrences": 12,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 7,
+        "zh": "客人"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "的客人"
+      },
+      {
+        "canonical": true,
+        "n": 4,
+        "zh": "客人们"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "观众们"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "看著"
+      }
+    ],
+    "zh": "客人们"
+  },
+  "客の声": {
+    "occurrences": 5,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "的声音"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "客人"
+      },
+      {
+        "canonical": true,
+        "n": 3,
+        "zh": "客人的声音"
+      }
+    ],
+    "zh": "客人的声音"
+  },
+  "客の男": {
+    "occurrences": 127,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 104,
+        "zh": "客人"
+      },
+      {
+        "canonical": false,
+        "n": 40,
+        "zh": "男客"
+      }
+    ],
+    "zh": "男客人"
+  },
+  "少女": {
+    "occurrences": 159,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 144,
+        "zh": "少女"
+      }
+    ],
+    "zh": "少女"
+  },
+  "工兵たち": {
+    "occurrences": 3,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "工兵"
+      },
+      {
+        "canonical": true,
+        "n": 2,
+        "zh": "工兵们"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "部分"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "到了"
+      }
+    ],
+    "zh": "工兵们"
+  },
+  "市民": {
+    "occurrences": 5,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 4,
+        "zh": "市民"
+      }
+    ],
+    "zh": "市民"
+  },
+  "師匠": {
+    "occurrences": 77,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 75,
+        "zh": "师父"
+      }
+    ],
+    "zh": "师傅"
+  },
+  "店主": {
+    "occurrences": 19,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 13,
+        "zh": "店主"
+      },
+      {
+        "canonical": false,
+        "n": 7,
+        "zh": "老板"
+      }
+    ],
+    "zh": "店主"
+  },
+  "店員": {
+    "occurrences": 10,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 10,
+        "zh": "店员"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "什么"
+      }
+    ],
+    "zh": "店员"
+  },
+  "店長": {
+    "occurrences": 10,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 10,
+        "zh": "店长"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "艾米莉"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "的店"
+      }
+    ],
+    "zh": "店长"
+  },
+  "強盗犯": {
+    "occurrences": 15,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 15,
+        "zh": "强盗"
+      },
+      {
+        "canonical": false,
+        "n": 8,
+        "zh": "强盗犯"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "个强盗"
+      }
+    ],
+    "zh": "抢劫犯"
+  },
+  "従者": {
+    "occurrences": 8,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 8,
+        "zh": "侍从"
+      },
+      {
+        "canonical": false,
+        "n": 7,
+        "zh": "的侍从"
+      },
+      {
+        "canonical": false,
+        "n": 6,
+        "zh": "姐姐"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "人的"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "姐姐大人的侍从"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "菲莉希欧涅"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "姐菲莉希欧涅的侍"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "菲莉希欧涅的侍从"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "姐姐菲莉希欧涅的"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "朝这边走"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "保琳娜"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "被姐姐"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "我装作"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "娼馆"
+      }
+    ],
+    "zh": "侍从"
+  },
+  "教団幹部": {
+    "occurrences": 4,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 4,
+        "zh": "教团干部"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "教徒"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "魔石"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "的教团干部和"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "教徒们"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "的魔石"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "开始"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "光芒"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "发出"
+      }
+    ],
+    "zh": "教团干部"
+  },
+  "教授": {
+    "occurrences": 65,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 65,
+        "zh": "教授"
+      }
+    ],
+    "zh": "教授"
+  },
+  "教祖": {
+    "occurrences": 27,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 16,
+        "zh": "教祖"
+      },
+      {
+        "canonical": false,
+        "n": 11,
+        "zh": "教主"
+      },
+      {
+        "canonical": false,
+        "n": 11,
+        "zh": "大人"
+      }
+    ],
+    "zh": "教祖"
+  },
+  "村人たち": {
+    "occurrences": 15,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 15,
+        "zh": "村民"
+      },
+      {
+        "canonical": true,
+        "n": 12,
+        "zh": "村民们"
+      }
+    ],
+    "zh": "村民们"
+  },
+  "格闘家": {
+    "occurrences": 30,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 29,
+        "zh": "格斗家"
+      },
+      {
+        "canonical": false,
+        "n": 15,
+        "zh": "世界第一"
+      },
+      {
+        "canonical": false,
+        "n": 11,
+        "zh": "的格斗家"
+      },
+      {
+        "canonical": false,
+        "n": 9,
+        "zh": "成为世界第一"
+      }
+    ],
+    "zh": "格斗家"
+  },
+  "機械魔獣": {
+    "occurrences": 4,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 4,
+        "zh": "机械魔兽"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "我们"
+      }
+    ],
+    "zh": "机械魔兽"
+  },
+  "歓声": {
+    "occurrences": 13,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 11,
+        "zh": "欢呼"
+      },
+      {
+        "canonical": true,
+        "n": 7,
+        "zh": "欢呼声"
+      },
+      {
+        "canonical": false,
+        "n": 6,
+        "zh": "发出"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "的欢"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "爆发出"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "的欢呼"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "的欢呼声"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "发出了"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "士兵们"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "和欢呼"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "怪物"
+      }
+    ],
+    "zh": "欢呼声"
+  },
+  "母親": {
+    "occurrences": 29,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 28,
+        "zh": "母亲"
+      },
+      {
+        "canonical": false,
+        "n": 8,
+        "zh": "的母亲"
+      },
+      {
+        "canonical": false,
+        "n": 8,
+        "zh": "你母亲"
+      }
+    ],
+    "zh": "母亲"
+  },
+  "氷河の厄災": {
+    "occurrences": 11,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 11,
+        "zh": "冰河之灾厄"
+      }
+    ],
+    "zh": "冰河之灾厄"
+  },
+  "父親": {
+    "occurrences": 4,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 4,
+        "zh": "父亲"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "说的"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "所以"
+      }
+    ],
+    "zh": "父亲"
+  },
+  "狼": {
+    "occurrences": 29,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 8,
+        "zh": "狼的"
+      }
+    ],
+    "zh": "狼"
+  },
+  "狼たち": {
+    "occurrences": 3,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 2,
+        "zh": "狼群"
+      }
+    ],
+    "zh": "狼群"
+  },
+  "猫": {
+    "occurrences": 33,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 9,
+        "zh": "小猫"
+      },
+      {
+        "canonical": false,
+        "n": 9,
+        "zh": "猫咪"
+      }
+    ],
+    "zh": "猫"
+  },
+  "男たち": {
+    "occurrences": 31,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 26,
+        "zh": "男人"
+      },
+      {
+        "canonical": true,
+        "n": 19,
+        "zh": "男人们"
+      }
+    ],
+    "zh": "男人们"
+  },
+  "男の子": {
+    "occurrences": 7,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 4,
+        "zh": "男孩"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "孩子"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "男孩子"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "的男"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "能让"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "男子"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "胸部"
+      }
+    ],
+    "zh": "男孩"
+  },
+  "男性客": {
+    "occurrences": 32,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 20,
+        "zh": "客人"
+      },
+      {
+        "canonical": false,
+        "n": 20,
+        "zh": "男客"
+      },
+      {
+        "canonical": true,
+        "n": 10,
+        "zh": "男性客人"
+      },
+      {
+        "canonical": false,
+        "n": 10,
+        "zh": "男客人"
+      }
+    ],
+    "zh": "男性客人"
+  },
+  "盗賊": {
+    "occurrences": 187,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 183,
+        "zh": "盗贼"
+      }
+    ],
+    "zh": "盗贼"
+  },
+  "盗賊たち": {
+    "occurrences": 41,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 39,
+        "zh": "盗贼"
+      },
+      {
+        "canonical": true,
+        "n": 18,
+        "zh": "盗贼们"
+      }
+    ],
+    "zh": "盗贼们"
+  },
+  "盗賊団": {
+    "occurrences": 51,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 50,
+        "zh": "盗贼团"
+      },
+      {
+        "canonical": false,
+        "n": 17,
+        "zh": "盗贼团的"
+      }
+    ],
+    "zh": "盗贼团"
+  },
+  "盗賊団のお頭": {
+    "occurrences": 4,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "盗贼团"
+      },
+      {
+        "canonical": true,
+        "n": 3,
+        "zh": "盗贼团头目"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "就是盗贼团头目"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "发光讯号"
+      }
+    ],
+    "zh": "盗贼团头目"
+  },
+  "砂嵐の厄災": {
+    "occurrences": 13,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 13,
+        "zh": "沙暴之灾厄"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "沙暴之灾厄的"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "石化"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "我们"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "石化魔法"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "调查"
+      }
+    ],
+    "zh": "沙暴之灾厄"
+  },
+  "若者": {
+    "occurrences": 30,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 29,
+        "zh": "年轻人"
+      },
+      {
+        "canonical": false,
+        "n": 17,
+        "zh": "琴乃"
+      }
+    ],
+    "zh": "年轻人"
+  },
+  "街の人": {
+    "occurrences": 18,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 10,
+        "zh": "的人"
+      },
+      {
+        "canonical": false,
+        "n": 9,
+        "zh": "里的"
+      },
+      {
+        "canonical": false,
+        "n": 7,
+        "zh": "城里的"
+      },
+      {
+        "canonical": false,
+        "n": 7,
+        "zh": "那座城"
+      },
+      {
+        "canonical": false,
+        "n": 6,
+        "zh": "里的人"
+      },
+      {
+        "canonical": false,
+        "n": 6,
+        "zh": "居民"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "那座城里的"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "城里的人"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "的人们"
+      }
+    ],
+    "zh": "镇民"
+  },
+  "衛兵": {
+    "occurrences": 5,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 5,
+        "zh": "卫兵"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "是卫兵"
+      }
+    ],
+    "zh": "卫兵"
+  },
+  "観客": {
+    "occurrences": 20,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 20,
+        "zh": "观众"
+      },
+      {
+        "canonical": false,
+        "n": 7,
+        "zh": "莱薇恩"
+      }
+    ],
+    "zh": "观众"
+  },
+  "観客たち": {
+    "occurrences": 4,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 4,
+        "zh": "观众们"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "莱薇恩"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "紧张"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "比赛"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "舞蹈"
+      }
+    ],
+    "zh": "观众们"
+  },
+  "記事": {
+    "occurrences": 31,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 25,
+        "zh": "报道"
+      },
+      {
+        "canonical": false,
+        "n": 13,
+        "zh": "的报道"
+      },
+      {
+        "canonical": false,
+        "n": 10,
+        "zh": "篇报道"
+      }
+    ],
+    "zh": "报导"
+  },
+  "警備ロボット": {
+    "occurrences": 15,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 15,
+        "zh": "警备机器人"
+      },
+      {
+        "canonical": false,
+        "n": 4,
+        "zh": "地下"
+      }
+    ],
+    "zh": "警备机器人"
+  },
+  "警備隊長": {
+    "occurrences": 5,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 5,
+        "zh": "警备队长"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "你是"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "司令"
+      }
+    ],
+    "zh": "警备队长"
+  },
+  "貴族": {
+    "occurrences": 35,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 35,
+        "zh": "贵族"
+      },
+      {
+        "canonical": false,
+        "n": 10,
+        "zh": "的贵族"
+      }
+    ],
+    "zh": "贵族"
+  },
+  "踊り子": {
+    "occurrences": 20,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 19,
+        "zh": "舞女"
+      },
+      {
+        "canonical": false,
+        "n": 6,
+        "zh": "莱薇恩"
+      }
+    ],
+    "zh": "舞女"
+  },
+  "野盗": {
+    "occurrences": 10,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 9,
+        "zh": "盗贼"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "斯卡蕾特"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "盗贼头目"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "的盗贼"
+      },
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "就是"
+      }
+    ],
+    "zh": "土匪"
+  },
+  "野盗のボス": {
+    "occurrences": 3,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "盗贼头目"
+      },
+      {
+        "canonical": false,
+        "n": 2,
+        "zh": "斯卡蕾特"
+      }
+    ],
+    "zh": "土匪头目"
+  },
+  "鏡影": {
+    "occurrences": 17,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 17,
+        "zh": "镜影"
+      },
+      {
+        "canonical": false,
+        "n": 6,
+        "zh": "镜影回廊"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "的镜影"
+      }
+    ],
+    "zh": "镜影"
+  },
+  "青年": {
+    "occurrences": 78,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 78,
+        "zh": "青年"
+      }
+    ],
+    "zh": "青年"
+  },
+  "鬼族たち": {
+    "occurrences": 10,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 10,
+        "zh": "鬼族"
+      },
+      {
+        "canonical": true,
+        "n": 5,
+        "zh": "鬼族们"
+      }
+    ],
+    "zh": "鬼族们"
+  },
+  "魔術師": {
+    "occurrences": 14,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": true,
+        "n": 14,
+        "zh": "魔术师"
+      },
+      {
+        "canonical": false,
+        "n": 6,
+        "zh": "的魔"
+      },
+      {
+        "canonical": false,
+        "n": 5,
+        "zh": "的魔术师"
+      }
+    ],
+    "zh": "魔术师"
+  },
+  "？？？": {
+    "occurrences": 10,
+    "source": "names表",
+    "variants": [
+      {
+        "canonical": false,
+        "n": 3,
+        "zh": "呀啊"
+      }
+    ],
+    "zh": "？？？"
+  }
+}
