@@ -42,11 +42,14 @@ AbyssMod 的翻译 CDN（`anosu/dotabyss-translation`）已停止更新（上游
 
 基础译文来自社区繁中镜像（`0BlueYan0/dotabyss-translation-zh_Hant`，原 anosu 布局）经 OpenCC t2s 转换（只转值不转 key），MasterData/UI 缺口部分为本仓库人工补翻。UI 残留日文的持续修复方法见 `tools/leak2table.py` 头部注释。
 
+> **斯卡雷特（スカーレット）剧情修复（v14）**：上游镜像把该角色 6 话（`107801*`，共 12 个文件 594 行）的译文整段填成了一部中国网络小说的正文，内容与日文原文完全无关。本仓库已将这 594 行**从日文原文全部重译**并替换，同时全量扫描确认其余 1327 话无同类问题。
+
 ## 版本
 
 | 版本 | 基线 | 说明 |
 |---|---|---|
-| 1.14.6（待发布） | 官方 1.14.6 (versionCode 31) | 纯翻译版：AbyssMod + UIDumpMod + 全量翻译包 |
+| 1.14.6 · mod v14 | 官方 1.14.6 (versionCode 31) | 纯翻译版：AbyssMod + UIDumpMod + 全量翻译包 + 斯卡雷特剧情重译修复 |
+| 1.14.6 · mod v13 | 官方 1.14.6 (versionCode 31) | 同 v14，但含上游斯卡雷特剧情的坏译文（已被 v14 取代，保留存档） |
 
 - 基线从官方 1.14.4 升级到 1.14.6 直连包（`global-metadata.dat` 两版本 md5 相同，旧 interop 代理与 mod DLL 直接沿用）
 - 内置启动 Toast 版本号同步为 1.14.6
