@@ -27,7 +27,7 @@ using Il2CppTMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.5.1", "ztztfdsf")]
+[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.5.3", "ztztfdsf")]
 [assembly: MelonGame("EXNOA LLC.", "ドットアビスX for Android")]
 
 namespace UIDumpMod
@@ -334,7 +334,6 @@ namespace UIDumpMod
                 if (!(comp is Component c)) return;
                 var text = (comp as TMP_Text)?.text ?? (comp as Text)?.text;
                 if (string.IsNullOrEmpty(text) || !NeedsTranslation(text)) return;
-
                 var path = PathOf(c.transform);
                 if (TryFallback(path, text, out var zh) || TryFragments(text, out zh))
                 {
