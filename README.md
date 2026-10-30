@@ -54,12 +54,13 @@ AbyssMod 的翻译 CDN（`anosu/dotabyss-translation`）已停止更新（上游
 
 | 版本 | 基线 | 说明 |
 |---|---|---|
+| 1.15.0 · mod v15 | 官方 1.15.0 (versionCode 32) | 游戏本体升级至 1.15.0；修复 payload.json（UIDumpMod 首启部署、移除 NoMosaic 残留）；携带 v14 全量翻译包。**1.15.0 新增内容（新活动剧情/新角色チヒロ/新委托 UI）尚未翻译，将随后续版本更新** |
 | 1.14.6 · mod v14 | 官方 1.14.6 (versionCode 31) | 纯翻译版：AbyssMod + UIDumpMod + 全量翻译包 + 斯卡雷特剧情重译 + 全库专名统一 |
 | 1.14.6 · mod v13 | 官方 1.14.6 (versionCode 31) | 含上游斯卡雷特剧情的坏译文与旧译名（已被 v14 取代，保留存档） |
 
-- 基线从官方 1.14.4 升级到 1.14.6 直连包（`global-metadata.dat` 两版本 md5 相同，旧 interop 代理与 mod DLL 直接沿用）
-- 内置启动 Toast 版本号同步为 1.14.6
-- 签名：自签名（`CN=AbyssMod Archive, O=ntr.best`）。**与 1.14.4 时代作者的 DMMMODKE 签名不同，无法覆盖安装旧 mod，需先卸载再装**
+- 基线从官方 1.14.4 升级到 1.14.6 直连包，再到 1.15.0（1.15.0 的 `global-metadata.dat` 有变化，但差异为纯增量：+134/-10 类型，经 il2cpp 双版本 diff 验证旧 interop 代理与 mod DLL 兼容复用）
+- 内置启动 Toast 版本号同步为 1.15.0
+- 签名：自签名（`CN=AbyssMod Archive, O=ntr.best`）。v14/v15 同签名线可直接覆盖安装；**与 1.14.4 时代作者的 DMMMODKE 签名不同，无法覆盖安装旧 mod，需先卸载再装**
 
 ## 安装
 
