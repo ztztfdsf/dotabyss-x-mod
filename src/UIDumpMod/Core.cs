@@ -17,6 +17,7 @@
 // 数据流与维护方法见同目录 README.md。
 
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -27,7 +28,7 @@ using Il2CppTMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.6.1", "ztztfdsf")]
+[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.7.0", "ztztfdsf")]
 [assembly: MelonGame("EXNOA LLC.", "ドットアビスX for Android")]
 
 namespace UIDumpMod
@@ -126,15 +127,23 @@ namespace UIDumpMod
             Patches.Apply(h, LoggerInstance);
             LoggerInstance.Msg($"UIDumpMod table: exact={_exactPaths?.Count ?? 0} suffix={_suffixPaths?.Count ?? 0} patterns={_patterns.Count}");
             ToastPump.Attach(LoggerInstance);
+            // 钩住原版 Toast.Show：AbyssMod 的所有弹窗（启动成功/翻译失败等）从这里进我们的自绘队列
+            try
+            {
+                var utilAsm = AppDomain.CurrentDomain.GetAssemblies().First(a => a.GetName().Name == "Utility");
+                var toastT = utilAsm.GetType("Utility.Notifications.Toast");
+                var show = AccessTools.Method(toastT, "Show");
+                h.Patch(show, postfix: new HarmonyMethod(typeof(Patches), nameof(Patches.ToastShow)));
+                LoggerInstance.Msg("[TP] Toast.Show hooked");
+            }
+            catch (Exception e) { LoggerInstance.Warning("[TP] Toast.Show hook failed: " + e.Message); }
         }
 
-        // ---------- 原版 Toast 心跳接管 ----------
-        // 背景：AbyssMod 的 Utility.Toast 外观由 ToastRuntime + AndroidToastRenderer（原生 Android View 覆盖层）绘制，
-        // 原本靠注入 Unity 的 ToastBehaviour(MonoBehaviour) 每帧调 ProcessFrame/Render。
-        // 1.15.0 下该组件注入必崩 → Utility.dll 的 Toast.Initialize 已改为直接 ret（tools/toastpatch），
-        // 心跳改由这里的 MelonMod OnUpdate/OnGUI 反射驱动：面子（渲染/主题/动画/文案）全是原版代码。
-        public override void OnUpdate() => ToastPump.Tick();
-        public override void OnGUI() => ToastPump.Gui();
+        // ---------- 自绘 Toast（原版视觉参数） ----------
+        // 1.15.0 重生成 interop 方法表部分错位：Utility 渲染链（ToastTheme/Color ctor/AndroidToastRenderer）必崩，
+        // 故面子照抄原版参数、里子全自写；只依赖探针验证过的 UGUI 槽位。
+        public override void OnUpdate() => ToastPump.Tick(UnityEngine.Time.unscaledDeltaTime);
+        public override void OnSceneWasLoaded(int buildIndex, string sceneName) => ToastPump.ProbeOnce();
 
         private int _frame;
         public override void OnLateUpdate()
@@ -341,6 +350,7 @@ namespace UIDumpMod
             {
                 if (_applying) return;
                 if (!(comp is Component c)) return;
+                if (comp is TextMeshProUGUI tu) ToastPump.OnAnchor(tu);
                 var text = (comp as TMP_Text)?.text ?? (comp as Text)?.text;
                 if (string.IsNullOrEmpty(text) || !NeedsTranslation(text)) return;
                 var path = PathOf(c.transform);
@@ -375,6 +385,10 @@ namespace UIDumpMod
     {
         public static void TmpSetText(TMP_Text __instance, string value) => Core.Handle(__instance, "TMP.set_text");
         public static void TmpOnEnable(TextMeshProUGUI __instance) => Core.Handle(__instance, "TMPUGUI.OnEnable");
+
+        // 原版 Toast.Show 的 postfix：按参数名绑定（kind 是 Utility 的枚举，用 object 接避免类型不匹配）
+        public static void ToastShow(string title, string message, object kind, float duration)
+            => ToastPump.Show(title, message, Convert.ToInt32(kind), duration);
         public static void LegacySetText(Text __instance, string value) => Core.Handle(__instance, "Legacy.set_text");
         public static void LegacyOnEnable(Text __instance) => Core.Handle(__instance, "Legacy.OnEnable");
 
