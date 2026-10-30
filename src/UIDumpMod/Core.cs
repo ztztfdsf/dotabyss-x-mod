@@ -27,7 +27,7 @@ using Il2CppTMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.5.3", "ztztfdsf")]
+[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.6.1", "ztztfdsf")]
 [assembly: MelonGame("EXNOA LLC.", "ドットアビスX for Android")]
 
 namespace UIDumpMod
@@ -125,7 +125,16 @@ namespace UIDumpMod
             var h = new HarmonyLib.Harmony("com.ztztfdsf.uidump");
             Patches.Apply(h, LoggerInstance);
             LoggerInstance.Msg($"UIDumpMod table: exact={_exactPaths?.Count ?? 0} suffix={_suffixPaths?.Count ?? 0} patterns={_patterns.Count}");
+            ToastPump.Attach(LoggerInstance);
         }
+
+        // ---------- 原版 Toast 心跳接管 ----------
+        // 背景：AbyssMod 的 Utility.Toast 外观由 ToastRuntime + AndroidToastRenderer（原生 Android View 覆盖层）绘制，
+        // 原本靠注入 Unity 的 ToastBehaviour(MonoBehaviour) 每帧调 ProcessFrame/Render。
+        // 1.15.0 下该组件注入必崩 → Utility.dll 的 Toast.Initialize 已改为直接 ret（tools/toastpatch），
+        // 心跳改由这里的 MelonMod OnUpdate/OnGUI 反射驱动：面子（渲染/主题/动画/文案）全是原版代码。
+        public override void OnUpdate() => ToastPump.Tick();
+        public override void OnGUI() => ToastPump.Gui();
 
         private int _frame;
         public override void OnLateUpdate()
