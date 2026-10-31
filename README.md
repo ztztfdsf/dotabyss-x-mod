@@ -40,8 +40,8 @@ AbyssMod 的翻译 CDN（`anosu/dotabyss-translation`）已停止更新（上游
 | 部分 | 覆盖 |
 |---|---|
 | 剧情（novels） | 1377 话全覆盖（1.14.6 基线 1339 话 + 1.15.0 新增 38 话：活动主线 8 话 + 亨丽埃塔/千寻个人与 H 剧情 30 文件，人工翻译） |
-| MasterData 翻译表（static） | 150 张表 / 74000+ 条目（深渊 157 层、商店礼包、活动任务、职业、角色档案等全量） |
-| UI 硬编码文本（ui_texts） | 6422 条路径（全 UI 预制体提取 + 运行时泄漏路径滚动修复） |
+| MasterData 翻译表（static） | 152 张表 / 18497 条目（深渊 157 层、商店礼包、活动任务、职业、角色档案、寝室名、句签名、图鉴等全量） |
+| UI 硬编码文本（ui_texts） | 6570 条路径（全 UI 预制体提取 + 运行时泄漏路径滚动修复） |
 | 角色名/专有名词（names） | 507 条（译名统一规则见 [`docs/GLOSSARY.md`](docs/GLOSSARY.md)） |
 
 基础译文来自社区繁中镜像（`0BlueYan0/dotabyss-translation-zh_Hant`，原 anosu 布局）经 OpenCC t2s 转换（只转值不转 key），MasterData/UI 缺口部分为本仓库人工补翻。UI 残留日文的持续修复方法见 `tools/leak2table.py` 头部注释。
@@ -54,6 +54,7 @@ AbyssMod 的翻译 CDN（`anosu/dotabyss-translation`）已停止更新（上游
 
 | 版本 | 基线 | 说明 |
 |---|---|---|
+| 1.15.0 · mod v17B | 官方 1.15.0 (versionCode 32) | **修复进入 H 剧情 CG 黑屏**（AbyssMod 旧 interop 渲染 hook 错杀 spine 模型，手术 no-op 定罪修复）；MasterData 全表清扫至 **152 表/18497 条**（寝室名/句签名/任务/图鉴/商店全量）；UI 路径增至 **6570**；UIDumpMod 1.9.0 纯翻译版（Toast 已拆除） |
 | 1.15.0 · mod v17 | 官方 1.15.0 (versionCode 32) | 游戏本体升级 1.15.0；interop 代理按新 metadata 重生成（修复闪退/字体丢失）；payload.json 修复；**38 话新剧情人工全译**（活动主线 + 亨丽埃塔/千寻）；Toast 改 UIDumpMod 自绘原版视觉（旧渲染链在新 interop 下 coreclr abort） |
 | 1.15.0 · mod v15/v16 | 官方 1.15.0 (versionCode 32) | v15 首版（已损坏勿用）；v16 修复闪退+字体但 Toast 渲染链崩溃（已被 v17 取代） |
 | 1.14.6 · mod v14 | 官方 1.14.6 (versionCode 31) | 纯翻译版：AbyssMod + UIDumpMod + 全量翻译包 + 斯卡雷特剧情重译 + 全库专名统一 |
