@@ -49,6 +49,20 @@ Check("路径不匹配", T("Other/Label", "深淵"), null);
 Check("通配符 key 不归 UIDumpMod", T("Wild/x/Text", "ワイルド"), null);
 Check("前缀不是后缀", T("Scene_NetherTop/Menu/Label/Extra", "深淵"), null);
 
+// ---------- 全局值级表（TextData 本地化层）----------
+var withGlobal = UiTextTable.FromJson(JsonSerializer.Serialize(new Dictionary<string, Dictionary<string, string>>
+{
+    ["__global__"] = new() { ["ミッション"] = "任务", ["あと{0}日{1}時間"] = "剩余{0}天{1}小时", ["ショップ"] = "商店" },
+    ["Some/Path"] = new() { ["ショップ"] = "路径优先商店" },
+}));
+string G2(string path, string text) => withGlobal.TryTranslate(path, text, out var r) ? r : null;
+string GG(string text) => withGlobal.TryTranslateGlobal(text, out var r) ? r : null;
+Check("全局值命中（任意路径）", GG("ミッション"), "任务");
+Check("全局模板命中", GG("あと3日07時間"), "剩余3天07小时");
+Check("路径命中优先于全局", G2("A/Some/Path", "ショップ"), "路径优先商店");
+Check("路径 miss 落到全局?（否：全局是独立兕底层）", G2("A/Other", "ショップ"), null);
+Check("全局未知文本", GG("未知の文言"), null);
+
 // ---------- 碎片级翻译（真实游戏文本） ----------
 string F(string s) => FragmentTranslator.TryTranslate(s, out var r) ? r : null;
 Check("碎片: 代码+HP", F("<color=#FFD700>アビスコード獲得</color>\n<color=#FF4444>HP40%減少</color>"),

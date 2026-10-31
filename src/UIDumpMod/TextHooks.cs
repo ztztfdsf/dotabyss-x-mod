@@ -66,6 +66,7 @@ namespace UIDumpMod
                 var path = PathOf(comp.transform);
                 string zh = null;
                 bool ok = (Core.Table != null && Core.Table.TryTranslate(path, text, out zh))
+                          || (Core.Table != null && Core.Table.TryTranslateGlobal(text, out zh))
                           || FragmentTranslator.TryTranslate(text, out zh);
                 if (ok) Write(tmp, legacy, zh, path, text);
                 else ReportLeak(tag, path, text);

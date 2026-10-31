@@ -20,7 +20,7 @@ using MelonLoader.Utils;
 using Il2CppTMPro;
 using UIDumpMod.Translation;
 
-[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.10.0", "ztztfdsf")]
+[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.11.0", "ztztfdsf")]
 [assembly: MelonGame("EXNOA LLC.", "ドットアビスX for Android")]
 
 namespace UIDumpMod
@@ -40,7 +40,7 @@ namespace UIDumpMod
             Table = LoadTable();
             TextHooks.Apply(new HarmonyLib.Harmony("com.ztztfdsf.uidump"), LoggerInstance);
             if (Table != null)
-                LoggerInstance.Msg($"UIDumpMod table: exact={Table.ExactPathCount} suffix={Table.SuffixPathCount} patterns={Table.PatternPathCount}");
+                LoggerInstance.Msg($"UIDumpMod table: exact={Table.ExactPathCount} suffix={Table.SuffixPathCount} patterns={Table.PatternPathCount} global={Table.GlobalCount}");
         }
 
         /// <summary>
