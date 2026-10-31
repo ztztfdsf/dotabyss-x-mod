@@ -13,25 +13,32 @@
 - 官方 `jp.co.fanzagames.dotabyss_x_a` → 共存包名 `jp.co.fanzagames.dotabyss_x_a.mod`（可与官方包并装）
 - arm64-v8a only · **Android 7.1+（minSdk 25 / targetSdk 36）**
 - 进程内挂载 .NET 运行时（LemonLoader = MelonLoader 安卓移植），加载两个 mod：
-  - **AbyssMod.dll**（原作者 Jitsu v1.1.4）：Harmony 补丁，剧情/UI/MasterData 翻译核心
-  - **UIDumpMod.dll**（本仓库自研，`src/UIDumpMod/`）：运行时 UI 兜底翻译层，修复预制体路径与运行时路径失配导致的数千条翻译失效
+  - **AbyssMod.dll + Utility.dll**（原作者 Jitsu v1.1.4，无源码）：Harmony 补丁，剧情/UI/MasterData 翻译核心。
+    原作者二进制按 1.14 interop 编译，在 1.15.0 新 interop 下有三处崩溃/错杀路径，由
+    **AbyssModPatcher**（`src/AbyssModPatcher/`）在构建时做 IL 手术：拆除 Toast 渲染链、
+    挖空错杀 spine CG 的三个渲染 hook。翻译逻辑零改动。
+  - **UIDumpMod.dll**（本仓库自研，`src/UIDumpMod/`）：运行时 UI 兜底翻译层，修复预制体
+    路径与运行时路径失配导致的数千条翻译失效
 - 登录 WebView UA 与官方包对齐（消除 `.mod` 包名暴露）
 - 游戏本体 `libil2cpp.so` / `libunity.so` / `global-metadata.dat` 与官方包逐字节一致，无代码注入、无其他功能改动
 
 ## 仓库结构
 
 ```
-src/UIDumpMod/    UIDumpMod 源码（.NET 10，含构建说明与架构文档）
-tools/            leak2table.py   — LEAK 日志 → ui_texts 补译维护工具
-                  glossary.py     — 专有名词一致性校验/统一工具
-                  glossary-fix.json — 人工确认的译名统一表
-docs/             GLOSSARY.md     — 专有名词对照表（唯一权威译名来源）
-                  glossary.json   — 同上，机器可读版
-                  UPDATE_SOP.md   — 版本更新六步流程
-                  AbyssMod.decompiled.cs（原作者 mod 的反编译参考，只读）
+src/UIDumpMod/        UIDumpMod 源码（.NET 10；Core + TextHooks + Translation/ 纯逻辑层）
+src/AbyssModPatcher/  对原作者 AbyssMod/Utility 二进制做 IL 手术的工具（修复新 interop 下的崩溃点）
+tests/UIDumpMod.SelfTest/  翻译逻辑自测（PC 端可跑，改逻辑先过它）
+tools/                novel_pull.py   — 新版本剧情拉取/解包/合并流水线（SOP ⑤）
+                      leak2table.py   — LEAK 日志 → ui_texts 补译维护工具
+                      glossary.py     — 专有名词一致性校验/统一工具
+                      glossary-fix.json — 人工确认的译名统一表
+docs/                 GLOSSARY.md     — 专有名词对照表（唯一权威译名来源）
+                      glossary.json   — 同上，机器可读版
+                      UPDATE_SOP.md   — 版本更新流程（含 interop 重生成与二进制手术）
+                      AbyssMod.decompiled.cs（原作者 mod 的反编译参考，只读）
 ```
 
-接手维护请先读 [`src/UIDumpMod/README.md`](src/UIDumpMod/README.md)（架构与踩坑记录）、[`docs/UPDATE_SOP.md`](docs/UPDATE_SOP.md)（版本更新流程）和 [`docs/GLOSSARY.md`](docs/GLOSSARY.md)（**译名唯一权威来源，改任何名字前先查这里**）。
+接手维护请先读 [`src/UIDumpMod/README.md`](src/UIDumpMod/README.md)（架构与踩坑记录）、[`docs/UPDATE_SOP.md`](docs/UPDATE_SOP.md)（版本更新流程）和 [`docs/GLOSSARY.md`](docs/GLOSSARY.md)（**译名唯一权威来源，改任何名字前先查这里**）。改翻译逻辑前先跑 `dotnet run --project tests/UIDumpMod.SelfTest`，全部通过再装机。
 
 ## 翻译状态
 

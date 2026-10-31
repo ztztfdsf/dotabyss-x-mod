@@ -49,8 +49,8 @@
 ```
 Game Version: <新版本号>
 2 Mods loaded                        ← AbyssMod + UIDumpMod（仅翻译层）
-[AbyssMod] MasterData translation plan created. Tables: 150
-[AbyssMod] Static translation bundle loaded. Tables: 150
+[AbyssMod] MasterData translation plan created. Tables: 151+
+[AbyssMod] Static translation bundle loaded. Tables: 152
 [AbyssMod] Static translation loaded [ui_texts]. Paths: <数>
 [AbyssMod] Font loaded: TTCuYuanJ SDF
 [UIDumpMod] table: exact=... suffix=... patterns=...
@@ -58,6 +58,25 @@ Game Version: <新版本号>
 ```
 
 加全功能页面过一遍（主页/队伍/商店/抽卡/冒险/剧情/深渊）+ 翻译显示确认。
+
+## ⑦ 重大版本附加：interop 重生成 + 原作者二进制手术
+
+当 `global-metadata.dat` 有实质变化（类型增减）时，除上述六步外还需要：
+
+1. **重生成 interop 代理**（否则旧代理槽位错位，mod 一调用就 coreclr abort）：
+   Cpp2IL dump 新版 → Il2CppInterop generator（LemonLoader 自带 fork）生成，
+   关键参数：`--game-assembly=<libil2cpp.so> --unity=<libunity.so>`，缺前者
+   生成的属性没有 GC 写屏障（写 MasterData 会崩），缺后者 AssetBundle 方法不还原
+   （字体加载失败）。生成后替换解码树 `runtime/interop/`（198 个程序集）。
+2. **原作者二进制手术**（AbyssMod/Utility 按 1.14 interop 编译，新 interop 下部分路径崩溃）：
+   ```
+   dotnet run src/AbyssModPatcher -c Release -- all <原版 Mods/AbyssMod 目录> <输出目录>
+   ```
+   自动完成：Utility.dll 拆 Toast 渲染链（保留门面签名）；AbyssMod.dll 挖空
+   DisableMosaic/Begin/EndNovelLive2DScale 三个渲染 hook（错杀 spine CG）。
+   **输入永远用原作者原版 dll**，不要拿已手术过的再手术。
+3. **UIDumpMod 也要用新 interop 重编**（csproj 默认引用当前解码树，见 -p:GameTree）。
+4. 冒烟重点：进一次 H 剧情（spine CG 显示）、等一次 MasterData 写完不崩、字体加载。
 
 ## 发布
 
