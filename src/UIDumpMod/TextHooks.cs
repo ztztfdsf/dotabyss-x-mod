@@ -61,6 +61,11 @@ namespace UIDumpMod
                 var tmp = comp as TMP_Text;
                 var legacy = comp as Text;
                 var text = tmp != null ? tmp.text : legacy?.text;
+                if (ForcedTexts.TryGet(text, out var forced))
+                {
+                    Write(tmp, legacy, forced, PathOf(comp.transform), text);
+                    return;
+                }
                 if (!JapaneseText.NeedsTranslation(text)) return;
 
                 var path = PathOf(comp.transform);

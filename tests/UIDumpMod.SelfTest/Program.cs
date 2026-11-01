@@ -82,6 +82,11 @@ Check("拼串: 阶级+レジェンダー", F("阶级4的レジェンダー 焰�
 Check("拼串: 保留 color 标签", F("<color=#a>探索隊A发现了银素材！</color>"), "<color=#a>探索队A发现了银素材！</color>");
 Check("拼串: 仍有假名 → 放弃", F("探索隊がなにかをした"), null);
 
+// ---------- 英文残留白名单 ----------
+Check("英文标题命中", ForcedTexts.TryGet("System Message", out var fz) ? fz : null, "系统消息");
+Check("英文标题带空白也命中", ForcedTexts.TryGet(" System Message\n", out var fz2) ? fz2 : null, "系统消息");
+Check("白名单不误伤普通英文", ForcedTexts.TryGet("Stage 3 Clear", out _).ToString(), "False");
+
 Console.WriteLine($"\nbuilt-in: {pass} passed, {fail} failed");
 
 // ---------- 可选：真实表覆盖率 ----------
