@@ -58,6 +58,8 @@ namespace UIDumpMod.Translation
             (Rx(@"^HP(\d+)%減少$"),            m => $"HP减少{m.Groups[1].Value}%"),
             (Rx(@"^侵食([+-]?\d+)$"),          m => $"浸蚀{m.Groups[1].Value}"),
             (Rx(@"^(インパクト|ラッシュ|セーフ|リスク)コード系統の恩恵ゲージが$"),   m => CodeNames[m.Groups[1].Value] + "代码系恩惠槽"),
+            (Rx(@"^(インパクト|ラッシュ|セーフ|リスク)コード系統的恩惠槽$"),            m => CodeNames[m.Groups[1].Value] + "代码系恩惠槽"),
+            (Rx(@"^(インパクト|ラッシュ|セーフ|リスク)コード系統的恩恵槽$"),            m => CodeNames[m.Groups[1].Value] + "代码系恩惠槽"),
             (Rx(@"^し、(インパクト|ラッシュ|セーフ|リスク)コード系統の恩恵ゲージが$"), m => "，" + CodeNames[m.Groups[1].Value] + "代码系恩惠槽"),
             (Rx(@"^(\d+)減少$"),               m => $"减少{m.Groups[1].Value}"),
             (Rx(@"^(\d+)上昇$"),               m => $"上升{m.Groups[1].Value}"),
