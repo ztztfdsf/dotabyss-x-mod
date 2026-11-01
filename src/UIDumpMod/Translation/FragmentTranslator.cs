@@ -33,6 +33,22 @@ namespace UIDumpMod.Translation
             ["インパクト"] = "冲击", ["ラッシュ"] = "突进", ["セーフ"] = "安全", ["リスク"] = "风险",
         };
 
+        /// <summary>
+        /// 拼串日志用的词级替换（长串优先）。
+        ///
+        /// 为什么需要：探索日志这类文本是运行时用「已译片段 + 未译片段」拼起来的，
+        /// 例如 "探索隊A发现了ランク4のエピック 粒子枪！"——整串查表永远 miss，
+        /// 但残留的只是一个词。做法：把已知日文词全部换成中文，
+        /// 换完之后如果整串再不剩假名，就认为翻完了；还剩假名就整体放弃（宁可留 LEAK 也不输出半中半日）。
+        /// 顺序必须长串在前，否则 "探索隊" 会先被 "探索" 之类的短词吃掉。
+        /// </summary>
+        private static readonly (string jp, string zh)[] Tokens =
+        {
+            ("探索隊", "探索队"), ("レジェンダー", "传说"), ("エピック", "史诗"),
+            ("コモン", "普通"), ("ランク", "阶级"), ("発見", "发现"),
+            ("ミレスガルド", "米雷斯加德"), ("の", "的"),
+        };
+
         /// <summary>正则规则，按顺序尝试（顺序即优先级）。build 拿到匹配结果返回译文。</summary>
         private static readonly (Regex rx, Func<Match, string> build)[] Rules =
         {
@@ -86,6 +102,14 @@ namespace UIDumpMod.Translation
             {
                 var m = rx.Match(core);
                 if (m.Success) { result = build(m); return true; }
+            }
+            // 词级回退：拼串日志（探索队/阶级/稀有度等残留词）
+            var replaced = core;
+            foreach (var (jp, zhTok) in Tokens) replaced = replaced.Replace(jp, zhTok);
+            if (!ReferenceEquals(replaced, core) && replaced != core && !JapaneseText.NeedsTranslation(replaced))
+            {
+                result = fragment.Replace(core, replaced);
+                return true;
             }
             return !JapaneseText.NeedsTranslation(core);
         }

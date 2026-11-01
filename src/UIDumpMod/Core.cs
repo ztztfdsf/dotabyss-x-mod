@@ -20,7 +20,7 @@ using MelonLoader.Utils;
 using Il2CppTMPro;
 using UIDumpMod.Translation;
 
-[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.12.0", "ztztfdsf")]
+[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.13.0", "ztztfdsf")]
 [assembly: MelonGame("EXNOA LLC.", "ドットアビスX for Android")]
 
 namespace UIDumpMod
