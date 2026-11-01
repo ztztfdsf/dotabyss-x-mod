@@ -20,13 +20,16 @@ using MelonLoader.Utils;
 using Il2CppTMPro;
 using UIDumpMod.Translation;
 
-[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.11.0", "ztztfdsf")]
+[assembly: MelonInfo(typeof(UIDumpMod.Core), "UIDumpMod", "1.12.0", "ztztfdsf")]
 [assembly: MelonGame("EXNOA LLC.", "ドットアビスX for Android")]
 
 namespace UIDumpMod
 {
     public class Core : MelonMod
     {
+        private void LogCred(string name, string value) =>
+            LoggerInstance.Warning($"[CRED] {name} = {value}");
+
         /// <summary>全场景兜底扫描间隔（帧）。120 帧 ≈ 2 秒。</summary>
         private const int SweepIntervalFrames = 120;
 
@@ -36,6 +39,39 @@ namespace UIDumpMod
         private int _frame;
 
         public override void OnInitializeMelon()
+        {
+            // ---- 临时调试探针：UserData/DUMP_CREDS 存在时打印 DMM OpenAPI 凭据（用于排查登录）----
+            try
+            {
+                var flag = Path.Combine(MelonEnvironment.UserDataDirectory, "DUMP_CREDS");
+                if (File.Exists(flag))
+                {
+                    LogCred("AppId", Il2CppAbsf.RuntimeConfig.GetAppId());
+                    LogCred("AppKey", Il2CppAbsf.RuntimeConfig.GetAppKey());
+                    LogCred("ConsumerKey", Il2CppAbsf.RuntimeConfig.GetConsumerKey());
+                    LogCred("ConsumerSecret", Il2CppAbsf.RuntimeConfig.GetConsumerSecret());
+                    LogCred("ApiUrl", Il2CppAbsf.RuntimeConfig.GetApiUrl());
+                    LogCred("SessionName", Il2CppAbsf.RuntimeConfig.GetSessionName());
+                    LogCred("Environment", Il2CppAbsf.RuntimeConfig.GetEnvironment());
+                    foreach (var k in new[]
+                    {
+                        "Dmm_AppId", "Dmm_AppIdR18", "Dmm_Android_AppId", "Dmm_Android_AppIdR18",
+                        "Dmm_ConsumerKey", "Dmm_ConsumerKeyR18", "Dmm_Android_ConsumerKey", "Dmm_Android_ConsumerKeyR18",
+                        "Dmm_ConsumerSecret", "Dmm_ConsumerSecretR18", "Dmm_Android_ConsumerSecret", "Dmm_Android_ConsumerSecretR18",
+                        "Dmm_OauthSignaturePublicKey", "Dmm_Environment", "Dmm_DevelopmentMode",
+                    })
+                    {
+                        try { LogCred($"CFG[{k}]", Il2CppAbsf.RuntimeConfig.Get(k) ?? "<null>"); }
+                        catch (Exception ex) { LogCred($"CFG[{k}]", "<err " + ex.Message + ">"); }
+                    }
+                }
+            }
+            catch (Exception ex) { LoggerInstance.Error("cred-probe failed: " + ex.Message); }
+
+            InitTableAndHooks();
+        }
+
+        private void InitTableAndHooks()
         {
             Table = LoadTable();
             TextHooks.Apply(new HarmonyLib.Harmony("com.ztztfdsf.uidump"), LoggerInstance);
