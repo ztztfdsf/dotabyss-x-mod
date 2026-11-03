@@ -61,6 +61,7 @@ docs/   GLOSSARY.md       — 专有名词对照表（唯一权威译名来源�
         glossary.json     — 同上，机器可读版
         UPDATE_SOP.md     — 版本更新九步流程（含 interop 重生成与二进制手术）
         TRANSLATION.md    — 翻译加载机制 / 数据格式 / 排障手册
+        SIGNING.md        — 签名线、密钥位置与备份、重签命令、换线影响
         AbyssMod.decompiled.cs（原作者 mod 的反编译参考，只读）
 ```
 
@@ -107,9 +108,14 @@ dotnet run --project tests/UIDumpMod.SelfTest           → 35 passed, 0 failed
 
 ## 已知限制
 
-- **签名密钥文件已丢失**：上述自签名线使用的 `modkey.jks` 在 2026-11-02 的一次磁盘事故中损毁，全盘取证（含 1.9 TB 裸盘扫描与设备端检索）确认不可恢复。
-  已发布的 v17B / v18 不受影响；但**未来若改用新密钥签名，将无法覆盖安装**，需先卸载再装（服务端存档不受影响，客户端本地数据与设置丢失）。
-  沿用旧钥的替代方案是以新的包名后缀另开一条共存线。具体走向以届时 Release 说明为准。
+- **下一版起换签名线（已定）**：v14～v18 使用的自签名密钥文件在 2026-11-02 的一次磁盘事故中损毁，经穷尽取证（G 盘 1.9 TB 裸盘扫描、全盘 PKCS12 普查、仓库全历史、设备端检索）确认不可恢复。
+  旧线证书：`CN=AbyssMod Archive, O=ntr.best, C=JP`，SHA-256 `774a4955…370d`。
+  新线 v2 证书：`CN=AbyssMod Archive v2`，SHA-256 `8fb9c845…f8b1`（已生成并三处备份）。
+  **影响**：新线首发包与 v18 及更早版本签名不同，**无法覆盖安装**，需先卸载旧 mod 再装。
+  - 服务端存档、角色、进度、氪金**不受影响**
+  - 本地游戏资源（`/sdcard/Android/data/<包名>/files/`，约 7 GB）会随卸载删除；想保住就在卸载前复制到其他目录，装好后拷回
+  - 客户端设置、缓存重建
+  细节与重签命令见 [`docs/SIGNING.md`](docs/SIGNING.md)。
 - 上游翻译 CDN（`anosu/dotabyss-translation`）已停止服务（HTTP 404），仓库内所有 release 均不依赖它。
 - 第三方客户端登录线上服务存在账号风险，见顶部免责。
 

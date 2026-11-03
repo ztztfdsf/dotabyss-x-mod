@@ -105,8 +105,11 @@ cp -r trans-out/novels/*            dl-<ver>.out/assets/LemonLoader/deployment/U
 2. manifest：包名加 `.mod` 后缀（共存）+ `AuthWebViewKt` UA 正则剥 `.mod`（smali 里要写 `\\.mod`，双层转义）
 3. Toast 版本串：AbyssMod.dll `#US` 堆同长替换（字符数必须一致，否则元数据位移）
 4. 只留 arm64（删 armeabi-v7a / x86）
-5. `zipalign` → `apksigner` 用 `out/modkey.jks`（CN=AbyssMod Archive，密码 `dotabyss`）
-   **必须同一把钥匙**，否则不能 `install -r` 覆盖（换钥匙 = 用户数据全丢）
+5. `zipalign -p -f 4` → `apksigner` 用 `keys/modkey-v2.jks`（CN=AbyssMod Archive v2，alias `abyssmod`，密码见 `keys/README.txt`）
+   证书 SHA-256 必须是 `8fb9c84540bd6210c41bfe35dd6ec54f24c1588f207630bb72ef4c87c8bdf8b1`。
+   **同一签名线内必须同一把钥匙**，否则不能 `install -r` 覆盖。
+   ⚠️ 旧线（`CN=AbyssMod Archive`，指纹 `774a4955…`）密钥已于 2026-11-02 事故中丢失，
+   **从下一版起改用新线 v2；换线首发无法覆盖安装，Release 说明必须写“先卸载再装”**。细节见 [`SIGNING.md`](SIGNING.md)。
 6. **unzip 三项实检**：`deployment/Mods/` 只含预期 mod、零凭据（.jks/keystore）、翻译表条数对得上
 
 ## 第 8 步｜装机验证（全绿才发版）

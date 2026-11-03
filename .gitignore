@@ -21,3 +21,11 @@ gt-*/
 base/
 out/
 *.apk
+
+# 签名密钥永不入库
+keys/
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.b64.txt
