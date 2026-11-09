@@ -94,7 +94,7 @@ dotnet run --project tests/UIDumpMod.SelfTest           → 35 passed, 0 failed
 
 | 版本 | 基线 | 说明 |
 |---|---|---|
-| （下一版，未发布） | 官方 1.15.0 (vc 32) | 译文树重组：static 23 处日文汉字漏转修正（`永続→永续` 等）；ui_texts 补齐运行时路径差异条目，路径 6,570→**6,322 归一后 7,498 条**（含 `__global__` 772→**870**）；manifest 摘要首次按 AbyssMod 真实算法生成（此前一直是过期值，日志 `JSON resource validation failed` 源于此）。**签名方案待定，见下方已知限制** |
+| 1.16.0 · mod v19e | 官方 1.16.0 (versionCode 33) | **当前对外版本（新签名线 v2 首发）**。基线升 1.16.0（vc33），interop 代理经 metadata diff 验证复用旧 198 个；**新剧情 32 话全译**（镜影回廊第五届 + 艾什莉/法莉丝 日常×3 + 角色剧情×9 + 寝室×3）；static 新增 336 条（1.16.0 新角色/装备/活动行）；names 新增 4 个专名；ui_texts 补齐 `難易度選択`；**边角文案补齐 164 条**（功能标签/商店/账号关联/删号/清缓存/支付订阅/下载维护/通用按钮，按深度 1~26 全层通配注入，ui_texts 6,724→6,750 路径）；缺口审计真缺 0（余 905 条为设计性跳过）；签名换新线 v2 `8fb9c845…` |
 | 1.15.0 · mod v18 | 官方 1.15.0 (versionCode 32) | **纯汉字日文根治**：日文标记字表 50→268（全表反推生成法），TextData 漏翻的 148 条纯汉字日文入 `__global__`（角色筛选/装备弹窗/灾厄防卫/商店/娼馆营业/深渊事件效果/武器种类）；ui_texts 6816→**6868**；UIDumpMod **1.12.0**（仅本地构建，未发布） |
 | 1.15.0 · mod v17B | 官方 1.15.0 (versionCode 32) | **当前对外版本**。修复进入 H 剧情 CG 黑屏（AbyssMod 旧 interop 渲染 hook 错杀 spine 模型，手术 no-op 定罪修复）；MasterData 全表清扫至 **152 表/18497 条**；UI 路径增至 **6570**；UIDumpMod 1.9.0 纯翻译版（Toast 已拆除） |
 | 1.15.0 · mod v17 | 官方 1.15.0 (versionCode 32) | 游戏本体升级 1.15.0；interop 代理按新 metadata 重生成（修复闪退/字体丢失）；payload.json 修复；**38 话新剧情人工全译**（活动主线 + 亨丽埃塔/千寻）；Toast 改 UIDumpMod 自绘原版视觉（旧渲染链在新 interop 下 coreclr abort） |
@@ -104,17 +104,18 @@ dotnet run --project tests/UIDumpMod.SelfTest           → 35 passed, 0 failed
 
 - 基线从官方 1.14.4 升级到 1.14.6 直连包，再到 1.15.0（1.15.0 的 `global-metadata.dat` 有变化，但差异为纯增量：+134/-10 类型，经 il2cpp 双版本 diff 验证旧 interop 代理与 mod DLL 兼容复用）
 - 内置启动 Toast 版本号同步为 1.15.0
-- 签名：自签名（`CN=AbyssMod Archive, O=ntr.best`）。v14～v18 同签名线可互相覆盖安装；**与 1.14.4 时代作者的 DMMMODKE 签名不同，无法覆盖安装旧 mod，需先卸载再装**
+- 签名：**v19e 起为新签名线 v2**（`CN=AbyssMod Archive v2`）；v14～v18 为旧线（`CN=AbyssMod Archive, O=ntr.best`），两线签名不同无法互相覆盖安装。v14～v18 同线可互相覆盖安装；**与 1.14.4 时代作者的 DMMMODKE 签名不同，无法覆盖安装旧 mod，需先卸载再装**
 
 ## 已知限制
 
-- **下一版起换签名线（已定）**：v14～v18 使用的自签名密钥文件在 2026-11-02 的一次磁盘事故中损毁，经穷尽取证（G 盘 1.9 TB 裸盘扫描、全盘 PKCS12 普查、仓库全历史、设备端检索）确认不可恢复。
-  旧线证书：`CN=AbyssMod Archive, O=ntr.best, C=JP`，SHA-256 `774a4955…370d`。
-  新线 v2 证书：`CN=AbyssMod Archive v2`，SHA-256 `8fb9c845…f8b1`（已生成并三处备份）。
-  **影响**：新线首发包与 v18 及更早版本签名不同，**无法覆盖安装**，需先卸载旧 mod 再装。
+- **v19e 起换签名线（已定）**：v14～v18 使用的自签名密钥文件在 2026-11-02 的一次磁盘事故中损毁，经穷尽取证（G 盘 1.9 TB 裸盘扫描、全盘 PKCS12 普查、仓库全历史、设备端检索）确认不可恢复。
+  旧线证书：`CN=AbyssMod Archive, O=ntr.best, C=JP`，SHA-256 `774a4955…370d`（已永久失效）。
+  新线 v2 证书：`CN=AbyssMod Archive v2`，SHA-256 `8fb9c845…f8b1`（v19e 起生效）。
+  **影响**：v19e 与 v18 及更早版本签名不同，**无法覆盖安装**，需先卸载旧 mod 再装。
   - 服务端存档、角色、进度、氪金**不受影响**
-  - 本地游戏资源（`/sdcard/Android/data/<包名>/files/`，约 7 GB）会随卸载删除；想保住就在卸载前复制到其他目录，装好后拷回
+  - 本地游戏资源（`/sdcard/Android/data/<包名>/files/`，约 7 GB）会随卸载删除；想保住就在卸载前复制到其他目录，装好后拷回（同盘复制约 1–2 分钟）
   - 客户端设置、缓存重建
+  - 另一条路径：设备已 root 且装了 CorePatch 时，开启「核心破解」即可忽略签名差异覆盖安装（本仓库实测可用，7 GB 资源原地保留）
   细节与重签命令见 [`docs/SIGNING.md`](docs/SIGNING.md)。
 - 上游翻译 CDN（`anosu/dotabyss-translation`）已停止服务（HTTP 404），仓库内所有 release 均不依赖它。
 - 第三方客户端登录线上服务存在账号风险，见顶部免责。

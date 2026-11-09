@@ -10,7 +10,7 @@ _cloudcheck/
 _patchtest*/
 _patchtest_in/
 _patchtest_out/
-_*.py
+_*
 WORKSPACE.md
 trans/
 trans_latest/
@@ -21,6 +21,14 @@ gt-*/
 base/
 out/
 *.apk
+cpp2il-*/
+v17B.out/
+mover/build/
+mover/classes/
+mover/bin/
+mover/gen/
+mover/*.ap_
+mover/*.apk
 
 # 签名密钥永不入库
 keys/
