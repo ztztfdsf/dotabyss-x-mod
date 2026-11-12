@@ -109,29 +109,47 @@ python tools/check_manifest.py --root cloud/translations          # 全绿才算
 
 ## 5. 两条更新路径
 
-### 5.1 本地（默认、无条件可用）
+### 5.1 云端拉取（主工作流，免重装）
+
+译文仓 = 本仓 `translations/` 目录（CDN 源）。游戏启动时拉 `manifest/zh_Hans.json`
+比哈希，不一致就拉新覆盖本地缓存（`[Translation.Cache] PreferLocalFiles = false`）。
+
+```bash
+# 一条命令：重算 manifest + 镜像 trans_latest/ -> translations/ + 校验
+python tools/publish_translations.py
+
+git add translations/ && git commit -m "…" && git push
+# 设备下次重启游戏自动拉新，无需重装 APK、无需 adb
+```
+
+CDN 地址（设备 AbyssMod.cfg 的 `[Translation] CDN`）：
+
+```
+https://raw.githubusercontent.com/ztztfdsf/dotabyss-x-mod/refs/heads/main/translations
+```
+
+注意事项：
+- **行尾**：`translations/` 内一律 LF（publish 脚本自动归一），与 raw 逐字节一致，md5 可自验。
+- **离线/拉取失败**：游戏回退本地缓存照常运行，只丢一次热更。
+- **manifest 摘要**必须用 `tools/build_manifest.py` 重算（历史手写 md5 全是假的，
+  会导致 `JSON resource validation failed` + 永远退回旧缓存）。
+- 发布后验收：`curl -s <CDN>/manifest/zh_Hans.json | md5sum` 对比本地
+  `translations/manifest/zh_Hans.json`。
+
+### 5.2 本地直推（断网/紧急兜底）
 
 ```bash
 # 1) 权威树 → 解码树（打新包时烤进去）
-cp trans_latest/*.{…} dl-<ver>.out/assets/LemonLoader/deployment/UserData/AbyssMod/translations/…
+python tools/publish_translations.py   # 先保证 translations/ 最新
+# 打包时 cp translations/… dl-<ver>.out/assets/LemonLoader/deployment/UserData/AbyssMod/translations/…
 
 # 2) 权威树 → 设备（不重装 APK 的即时生效路径）
 adb push trans_latest/ /sdcard/Android/data/<包名>/files/MelonLoader/UserData/AbyssMod/translations/
 # 推完必须 md5 逐位比对（本地 vs 设备）
 ```
 
-### 5.2 云端（可选热更）
-
-只在自己的 CDN 可用、且 manifest 摘要正确时才有意义。
-
-```bash
-# 生成 → 推送（自带仓库）
-python tools/build_manifest.py --root cloud/translations
-cd cloud && git add -A && git commit -m "…" && git push
-# 设备侧把 [Translation] CDN 指过去即可
-```
-
-> 已知：`anosu/dotabyss-translation` 上游已 404。自建数据仓库的地址见 Release 说明。
+> 历史：`anosu/dotabyss-translation` 上游已 404（那是原作者的 CDN 源）。现已换到
+> 自建 `translations/`（地址见上），云端拉取链路 2026-11-12 实测通。
 
 ---
 

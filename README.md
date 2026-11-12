@@ -35,11 +35,13 @@ APK 内置  assets/LemonLoader/deployment/UserData/AbyssMod/translations/
 ```
 
 - 首启后完全离线可用，不联网、不校验、不拉取。
-- `AbyssMod.cfg` 里的 `[Translation] CDN` 是**可选的热更通道**，默认指向的上游仓库已停止服务（404）。
-  拉不到时 AbyssMod 会回退到本地文件继续工作，只在日志里留一条 warning，不影响使用。
-  想把本地锁死为一等公民，把 `[Translation.Cache] PreferLocalFiles = true` 即可（本地文件存在时跳过清单校验直接使用）。
-- 所以「云端翻译仓库」在本项目里是**可选的第二分发通道**（给不想重装 APK 的场景做增量热更），不是运行必需。
-  维护者自用的设备走本地，不必改 CDN。
+- **译文热更（主更新通道）**：`AbyssMod.cfg` 的 `[Translation] CDN` 指向本仓
+  [`translations/`](translations/) 目录（GitHub raw）。游戏启动时拉 manifest 比哈希，
+  不一致就自动拉新覆盖本地——**改译文只需 `python tools/publish_translations.py` + git push，
+  设备下次启动自动更新，无需重装 APK**。
+- 离线/拉取失败时 AbyssMod 自动回退本地文件继续工作，只留一条 warning，不影响使用。
+  想把本地锁死为一等公民，把 `[Translation.Cache] PreferLocalFiles = true` 即可。
+- APK 内置的译文只是首启基线；长期更新靠云端拉取，两者互不冲突。
 
 细节（文件布局、摘要算法、热更与排障流程）见 [`docs/TRANSLATION.md`](docs/TRANSLATION.md)。
 
@@ -118,7 +120,7 @@ dotnet run --project tests/UIDumpMod.SelfTest           → 35 passed, 0 failed
   - 客户端设置、缓存重建
   - 另一条路径：设备已 root 且装了 CorePatch 时，开启「核心破解」即可忽略签名差异覆盖安装（本仓库实测可用，7 GB 资源原地保留）
   细节与重签命令见 [`docs/SIGNING.md`](docs/SIGNING.md)。
-- 上游翻译 CDN（`anosu/dotabyss-translation`）已停止服务（HTTP 404），仓库内所有 release 均不依赖它。
+- 原作者的上游翻译 CDN（`anosu/dotabyss-translation`）已停止服务（HTTP 404）；本仓已改用自建 `translations/` 目录作热更源（见上「译文热更」），仓库内所有 release 均不依赖旧源。
 - 第三方客户端登录线上服务存在账号风险，见顶部免责。
 
 ## 安装
