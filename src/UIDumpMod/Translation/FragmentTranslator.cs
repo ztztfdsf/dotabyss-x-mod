@@ -24,6 +24,9 @@ namespace UIDumpMod.Translation
         {
             ["アビスコード獲得"] = "获得深渊代码",
             ["アイテム獲得"] = "获得道具",
+            ["アイテム消費"] = "消耗道具",
+            ["鍵消費"] = "消耗钥匙",
+            ["アビスコード変換"] = "转换深渊代码",
             ["ナゾの鍵"] = "谜之钥匙",
         };
 
@@ -56,7 +59,11 @@ namespace UIDumpMod.Translation
             (Rx(@"^アビスコイン(\d+)個消費$"), m => $"消耗{m.Groups[1].Value}个深渊币"),
             (Rx(@"^HP(\d+)%回復$"),            m => $"HP恢复{m.Groups[1].Value}%"),
             (Rx(@"^HP(\d+)%減少$"),            m => $"HP减少{m.Groups[1].Value}%"),
-            (Rx(@"^侵食([+-]?\d+)$"),          m => $"浸蚀{m.Groups[1].Value}"),
+            (Rx(@"^浸食率([+-]?\d+)(上昇|増加)$"), m => $"侵蚀率上升{m.Groups[1].Value}"),
+            (Rx(@"^浸食率([+-]?\d+)減少$"),     m => $"侵蚀率降低{m.Groups[1].Value}"),
+            (Rx(@"^ナゾの鍵(\d+)個獲得$"),     m => $"获得{m.Groups[1].Value}个谜之钥匙"),
+            (Rx(@"^ナゾの鍵(\d+)個消費$"),     m => $"消耗{m.Groups[1].Value}个谜之钥匙"),
+            (Rx(@"^侵食([+-]?\d+)$"),          m => $"侵蚀{m.Groups[1].Value}"),
             (Rx(@"^(インパクト|ラッシュ|セーフ|リスク)コード系統の恩恵ゲージが$"),   m => CodeNames[m.Groups[1].Value] + "代码系恩惠槽"),
             (Rx(@"^(インパクト|ラッシュ|セーフ|リスク)コード系統的恩惠槽$"),            m => CodeNames[m.Groups[1].Value] + "代码系恩惠槽"),
             (Rx(@"^(インパクト|ラッシュ|セーフ|リスク)コード系統的恩恵槽$"),            m => CodeNames[m.Groups[1].Value] + "代码系恩惠槽"),
@@ -96,7 +103,9 @@ namespace UIDumpMod.Translation
         /// </summary>
         private static bool TryFragment(string fragment, out string result)
         {
-            var core = fragment.Trim();
+            // 宽度归一：游戏内半角%与全角％混用（HP20％回復 / HP40%減少 同屏共存），
+            // 规则一律按半角%写，这里先归一再匹配。
+            var core = fragment.Trim().Replace('％', '%');
             result = fragment;
             if (core.Length == 0) return true;
             if (Glossary.TryGetValue(core, out var zh)) { result = zh; return true; }

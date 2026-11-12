@@ -72,7 +72,15 @@ Check("碎片: 消耗", F("<color=#a>アビスコイン50個消費</color>"), "<
 Check("碎片: 恩恵ゲージ长句",
       F("<color=#a>インパクトコード系統の恩恵ゲージが</color><color=#b>10上昇</color><color=#a>し、セーフコード系統の恩恵ゲージが</color><color=#b>5減少</color><color=#a>しました。</color>"),
       "<color=#a>冲击代码系恩惠槽</color><color=#b>上升10</color><color=#a>，安全代码系恩惠槽</color><color=#b>减少5</color><color=#a>。</color>");
-Check("碎片: 逗号拼接", F("<color=#a>HP10%回復</color>,<color=#b>侵食+3</color>"), "<color=#a>HP恢复10%</color>，<color=#b>浸蚀+3</color>");
+Check("碎片: 逗号拼接", F("<color=#a>HP10%回復</color>,<color=#b>侵食+3</color>"), "<color=#a>HP恢复10%</color>，<color=#b>侵蚀+3</color>");
+Check("碎片: 全角％宽度归一", F("<color=#4cf37b>HP20％回復</color>"), "<color=#4cf37b>HP恢复20%</color>");
+Check("碎片: 浸食率上昇", F("<color=#ff8232>浸食率20上昇</color>"), "<color=#ff8232>侵蚀率上升20</color>");
+Check("碎片: 浸食率増加", F("<color=#ff8232>浸食率40増加</color>"), "<color=#ff8232>侵蚀率上升40</color>");
+Check("碎片: 浸食率減少", F("<color=#4cf37b>浸食率{0}減少</color>".Replace("{0}", "15")), "<color=#4cf37b>侵蚀率降低15</color>");
+Check("碎片: 谜之钥匙获得", F("<color=#4cf37b>ナゾの鍵3個獲得</color>"), "<color=#4cf37b>获得3个谜之钥匙</color>");
+Check("碎片: 谜之钥匙消耗", F("<color=#ff8232>ナゾの鍵2個消費</color>"), "<color=#ff8232>消耗2个谜之钥匙</color>");
+Check("碎片: 双行复合串(深渊事件选项)", F("<color=#4cf37b>アイテム獲得</color>\n<color=#ff8232>浸食率20上昇</color>"), "<color=#4cf37b>获得道具</color>\n<color=#ff8232>侵蚀率上升20</color>");
+Check("碎片: 双行复合串(全角％)", F("<color=#ff8232>アビスコイン40個消費</color>\n<color=#4cf37b>HP20％回復</color>"), "<color=#ff8232>消耗40个深渊币</color>\n<color=#4cf37b>HP恢复20%</color>");
 Check("碎片: 有一段翻不出 → 整体放弃", F("<color=#a>アビスコード獲得</color><color=#b>未知の効果</color>"), null);
 Check("碎片: 已是中文 → 不处理", F("获得深渊代码"), null);
 
