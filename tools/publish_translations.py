@@ -36,7 +36,8 @@ def run(script, *args):
         sys.exit(r.returncode)
 
 def mirror(src, dst):
-    """单向镜像：src 覆盖 dst，删除 dst 多余文件。返回 (复制数, 删除数)。"""
+    """单向镜像：src 覆盖 dst，删除 dst 多余文件。返回 (复制数, 删除数)。
+    文本统一 LF 行尾（与 git 远端逐字节一致，md5 可自验）。"""
     copied = deleted = 0
     for root, dirs, files in os.walk(src):
         rel = os.path.relpath(root, src)
@@ -44,8 +45,10 @@ def mirror(src, dst):
         os.makedirs(target, exist_ok=True)
         for f in files:
             s, d = os.path.join(root, f), os.path.join(target, f)
-            if not os.path.exists(d) or not filecmp.cmp(s, d, shallow=False):
-                shutil.copy2(s, d)
+            data = open(s, "rb").read().replace(b"\r\n", b"\n")
+            old = open(d, "rb").read() if os.path.exists(d) else None
+            if old != data:
+                open(d, "wb").write(data)
                 copied += 1
     for root, dirs, files in os.walk(dst):
         rel = os.path.relpath(root, src) if False else os.path.relpath(root, dst)
