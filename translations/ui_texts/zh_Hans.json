@@ -16016,131 +16016,6 @@
   "Scene_DisasterDetail/ContentsR/EnemyList/ScrollerV/DevContent/CellView/Disaster/Waiting/Button/RootUI/Fade/State/Lock/Text": {
     "メインストーリー00章クリアで解放": "通关主线剧情00章后解锁"
   },
-  "Scene_DisasterPartyTop/ButtonSet/Button_UnitReset/RootUI/Parts/Text": {
-    "一括撤去": "一键拆除"
-  },
-  "Scene_DisasterPartyTop/ButtonSet/UnitList/Text": {
-    "設備一覧": "设备一览"
-  },
-  "Scene_DisasterPartyTop/ButtonSet_R/Button_Confirm/RootUI/Parts/Text": {
-    "配置終了": "配置结束"
-  },
-  "Scene_DisasterPartyTop/ButtonSet_R/Button_QuestSelect/RootUI/Parts/Text": {
-    "登録して出撃": "登记并出击"
-  },
-  "Scene_DisasterPartyTop/ButtonSet_R/Content/Prism/Text": {
-    "マナ燃料": "魔力燃料"
-  },
-  "Scene_DisasterPartyTop/ButtonSet_R/Content/PrismNone/Text": {
-    "マナ燃料は消費されません": "魔力燃料不会被消耗"
-  },
-  "Scene_DisasterPartyTop/ButtonSet_R/PartyPower/TextDefensPower/TextTitle": {
-    "防衛戦力：": "防卫战力："
-  },
-  "Scene_DisasterPartyTop/ButtonSet_R/PartyPower/TextPartyPower/TextTitle": {
-    "パーティ戦力：": "队伍战力："
-  },
-  "Scene_DisasterPartyTop/DetailSetAnim/DetailSet/Box/Name/Text": {
-    "設備名四五六七八九十一二三四五": "设备名四五六七八九十一二三四五"
-  },
-  "Scene_DisasterPartyTop/DetailSetAnim/DetailSet/Box/Type/Text": {
-    "攻撃タイプ": "攻击类型"
-  },
-  "Scene_DisasterPartyTop/DetailSetAnim/DetailSet/Detail/Button_Detail_Minus/RootUI/Parts/Text": {
-    "簡易": "简易"
-  },
-  "Scene_DisasterPartyTop/DetailSetAnim/DetailSet/Detail/Button_Research/RootUI/Parts/Text": {
-    "施設へ": "前往设施"
-  },
-  "Scene_DisasterPartyTop/DetailSetAnim/DetailSet/Detail/Content/Prism/Text": {
-    "マナ燃料": "魔力燃料"
-  },
-  "Scene_DisasterPartyTop/DetailSetAnim/DetailSet/Detail/List/SimpleScroller/ScrollView/Viewport/Content/Text": {
-    "防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト": "防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本"
-  },
-  "Scene_DisasterPartyTop/DetailSetAnim/DetailSet/Detail/List_Parameter/Box/SimpleScroller/ScrollView/Viewport/Content/Text": {
-    "パラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入ります仕様次第ではリスト化するかも？パラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入ります仕様次第ではリスト化するかも？パラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入ります仕様次第ではリスト化するかも？": "参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此视规格可能会列表化？参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此视规格可能会列表化？参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此视规格可能会列表化？"
-  },
-  "Scene_DisasterPartyTop/DetailSetAnim/DetailSet/Detail/List_Parameter/H3/TextTitle": {
-    "パラメータ一覧": "参数一览"
-  },
-  "Scene_DisasterPartyTop/DetailSetAnim/DetailSet/Detail/Status_Category/H5/TextTitle": {
-    "カテゴリ": "类别"
-  },
-  "Scene_DisasterPartyTop/DetailSetAnim/DetailSet/Detail/Status_Category/Value": {
-    "迎撃型": "迎击型"
-  },
-  "Scene_DisasterPartyTop/DetailSetAnim/DetailSet/Detail_S/Button_Detail_Plus/RootUI/Parts/Text": {
-    "詳細": "详情"
-  },
-  "Scene_DisasterPartyTop/DetailSetAnim/DetailSet/Detail_S/Reference_Tag/Tag_Text/Text": {
-    "HP300一": "HP300一"
-  },
-  "Scene_DisasterPartyTop/DetailSetAnim/DetailSet/Detail_S/Text": {
-    "敵の攻撃対象となり、敵の進行を止める九十一二三四五": "成为敌人的攻击目标，阻止敌人前进九十一二三四五"
-  },
-  "Scene_DisasterPartyTop/ManaGemArea/Thumbnail_Category_ManaGem/RootUI/State/TextCategoryName": {
-    "サポート": "支援",
-    "近接": "近战",
-    "遠隔": "远程"
-  },
-  "Scene_DisasterPartyTop/QuestDetail/EnemyPower/TextTitle": {
-    "推奨戦力": "推荐战力"
-  },
-  "Scene_DisasterPartyTop/QuestDetail/Text": {
-    "クエスト詳細": "关卡详情"
-  },
-  "Scene_DisasterPartyTop/SD/1/SD_Local_08/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "Scene_DisasterPartyTop/SD/1/SD_Local_09/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "Scene_DisasterPartyTop/SD/1/SD_Local_10/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "Scene_DisasterPartyTop/SD/2/SD_Local_06/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "Scene_DisasterPartyTop/SD/2/SD_Local_07/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "Scene_DisasterPartyTop/SD/3/SD_Local_03/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "Scene_DisasterPartyTop/SD/3/SD_Local_04/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "Scene_DisasterPartyTop/SD/3/SD_Local_05/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "Scene_DisasterPartyTop/SD/4/SD_Local_01/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "Scene_DisasterPartyTop/SD/4/SD_Local_02/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "Scene_DisasterPartyTop/SD_ButtonSet/Button_Party/RootUI/Parts/Text": {
-    "キャラクター編成": "角色编成"
-  },
-  "Scene_DisasterPartyTop/UnitList/Filter/BaseSkill/RootUI/Parts/Text": {
-    "基地スキル": "基地技能"
-  },
-  "Scene_DisasterPartyTop/UnitList/Filter/Intercept/RootUI/Parts/Text": {
-    "迎撃型": "迎击型"
-  },
-  "Scene_DisasterPartyTop/UnitList/Filter/Obstacle/RootUI/Parts/Text": {
-    "障害物型": "障碍物型"
-  },
-  "Scene_DisasterPartyTop/UnitList/Filter/Support/RootUI/Parts/Text": {
-    "支援型": "支援型"
-  },
-  "Scene_DisasterPartyTop/UnitList/Filter/Trap/RootUI/Parts/Text": {
-    "罠型": "陷阱型"
-  },
-  "Scene_DisasterPartyTop/UnitList/Filter/Wall/RootUI/Parts/Text": {
-    "壁上型": "壁上型"
-  },
   "Scene_DisasterQuestTop/ContentsL/ButtonSet/Set_Ranking/Button_Ranking/Button/RootUI/Base/Active/Text": {
     "ランキング": "排行榜"
   },
@@ -26208,131 +26083,6 @@
   "DisasterDetail/UICanvas/RootUI/UIGroup/Top/ContentsR/EnemyList/ScrollerV/DevContent/CellView/Disaster/Waiting/Button/RootUI/Fade/State/Lock/Text": {
     "メインストーリー00章クリアで解放": "通关主线剧情00章后解锁"
   },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/ButtonSet/Button_UnitReset/RootUI/Parts/Text": {
-    "一括撤去": "一键拆除"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/ButtonSet/UnitList/Text": {
-    "設備一覧": "设备一览"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/ButtonSet_R/Button_Confirm/RootUI/Parts/Text": {
-    "配置終了": "配置结束"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/ButtonSet_R/Button_QuestSelect/RootUI/Parts/Text": {
-    "登録して出撃": "登记并出击"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/ButtonSet_R/Content/Prism/Text": {
-    "マナ燃料": "魔力燃料"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/ButtonSet_R/Content/PrismNone/Text": {
-    "マナ燃料は消費されません": "魔力燃料不会被消耗"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/ButtonSet_R/PartyPower/TextDefensPower/TextTitle": {
-    "防衛戦力：": "防卫战力："
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/ButtonSet_R/PartyPower/TextPartyPower/TextTitle": {
-    "パーティ戦力：": "队伍战力："
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Box/Name/Text": {
-    "設備名四五六七八九十一二三四五": "设备名四五六七八九十一二三四五"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Box/Type/Text": {
-    "攻撃タイプ": "攻击类型"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/Button_Detail_Minus/RootUI/Parts/Text": {
-    "簡易": "简易"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/Button_Research/RootUI/Parts/Text": {
-    "施設へ": "前往设施"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/Content/Prism/Text": {
-    "マナ燃料": "魔力燃料"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/List/SimpleScroller/ScrollView/Viewport/Content/Text": {
-    "防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト": "防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/List_Parameter/Box/SimpleScroller/ScrollView/Viewport/Content/Text": {
-    "パラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入ります仕様次第ではリスト化するかも？パラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入ります仕様次第ではリスト化するかも？パラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入ります仕様次第ではリスト化するかも？": "参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此视规格可能会列表化？参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此视规格可能会列表化？参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此视规格可能会列表化？"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/List_Parameter/H3/TextTitle": {
-    "パラメータ一覧": "参数一览"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/Status_Category/H5/TextTitle": {
-    "カテゴリ": "类别"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/Status_Category/Value": {
-    "迎撃型": "迎击型"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail_S/Button_Detail_Plus/RootUI/Parts/Text": {
-    "詳細": "详情"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail_S/Reference_Tag/Tag_Text/Text": {
-    "HP300一": "HP300一"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail_S/Text": {
-    "敵の攻撃対象となり、敵の進行を止める九十一二三四五": "成为敌人的攻击目标，阻止敌人前进九十一二三四五"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/ManaGemArea/Thumbnail_Category_ManaGem/RootUI/State/TextCategoryName": {
-    "サポート": "支援",
-    "近接": "近战",
-    "遠隔": "远程"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/QuestDetail/EnemyPower/TextTitle": {
-    "推奨戦力": "推荐战力"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/QuestDetail/Text": {
-    "クエスト詳細": "关卡详情"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/SD/1/SD_Local_08/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/SD/1/SD_Local_09/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/SD/1/SD_Local_10/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/SD/2/SD_Local_06/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/SD/2/SD_Local_07/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/SD/3/SD_Local_03/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/SD/3/SD_Local_04/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/SD/3/SD_Local_05/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/SD/4/SD_Local_01/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/SD/4/SD_Local_02/RootUI/Base/Content/Info/NotPossible/Label/Text": {
-    "出撃制限": "出击限制"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/SD_ButtonSet/Button_Party/RootUI/Parts/Text": {
-    "キャラクター編成": "角色编成"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/UnitList/Filter/BaseSkill/RootUI/Parts/Text": {
-    "基地スキル": "基地技能"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/UnitList/Filter/Intercept/RootUI/Parts/Text": {
-    "迎撃型": "迎击型"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/UnitList/Filter/Obstacle/RootUI/Parts/Text": {
-    "障害物型": "障碍物型"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/UnitList/Filter/Support/RootUI/Parts/Text": {
-    "支援型": "支援型"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/UnitList/Filter/Trap/RootUI/Parts/Text": {
-    "罠型": "陷阱型"
-  },
-  "DisasterPartyTop/UICanvas/RootUI/UIGroup/Top/UnitList/Filter/Wall/RootUI/Parts/Text": {
-    "壁上型": "壁上型"
-  },
   "DisasterQuestTop/UICanvas/RootUI/UIGroup/Top/ContentsL/ButtonSet/Set_Ranking/Button_Ranking/Button/RootUI/Base/Active/Text": {
     "ランキング": "排行榜"
   },
@@ -29574,5 +29324,124 @@
   },
   "DisasterParty/UICanvas/RootUI/UIGroup/Top/ButtonSet_R/AllPower/TextTitle": {
     "総合戦力": "总战力"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/ButtonSet/Button_UnitReset/RootUI/Parts/Text": {
+    "一括撤去": "一键拆除"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/ButtonSet_R/Button_Confirm/RootUI/Parts/Text": {
+    "配置終了": "配置结束"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/ButtonSet_R/Button_QuestSelect/RootUI/Parts/Text": {
+    "登録して出撃": "登记并出击"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/ButtonSet_R/Content/Prism/Text": {
+    "マナ燃料": "魔力燃料"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/ButtonSet_R/Content/PrismNone/Text": {
+    "マナ燃料は消費されません": "魔力燃料不会被消耗"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/ButtonSet_R/PartyPower/TextDefensPower/TextTitle": {
+    "防衛戦力：": "防卫战力："
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/ButtonSet_R/PartyPower/TextPartyPower/TextTitle": {
+    "パーティ戦力：": "队伍战力："
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Box/Name/Text": {
+    "設備名四五六七八九十一二三四五": "设备名四五六七八九十一二三四五"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Box/Type/Text": {
+    "攻撃タイプ": "攻击类型"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/Button_Detail_Minus/RootUI/Parts/Text": {
+    "簡易": "简易"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/Button_Research/RootUI/Parts/Text": {
+    "施設へ": "前往设施"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/Content/Prism/Text": {
+    "マナ燃料": "魔力燃料"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/List/SimpleScroller/ScrollView/Viewport/Content/Text": {
+    "防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト防衛設備説明テキスト": "防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本防卫设备说明文本"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/List_Parameter/Box/SimpleScroller/ScrollView/Viewport/Content/Text": {
+    "パラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入ります仕様次第ではリスト化するかも？パラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入ります仕様次第ではリスト化するかも？パラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入りますパラメータ情報が入ります仕様次第ではリスト化するかも？": "参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此视规格可能会列表化？参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此视规格可能会列表化？参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此参数信息将显示于此视规格可能会列表化？"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/List_Parameter/H3/TextTitle": {
+    "パラメータ一覧": "参数一览"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/Status_Category/H5/TextTitle": {
+    "カテゴリ": "类别"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail/Status_Category/Value": {
+    "迎撃型": "迎击型"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail_S/Button_Detail_Plus/RootUI/Parts/Text": {
+    "詳細": "详情"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail_S/Reference_Tag/Tag_Text/Text": {
+    "HP300一": "HP300一"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/DetailSetAnim/DetailSet/Detail_S/Text": {
+    "敵の攻撃対象となり、敵の進行を止める九十一二三四五": "成为敌人的攻击目标，阻止敌人前进九十一二三四五"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/ManaGemArea/Thumbnail_Category_ManaGem/RootUI/State/TextCategoryName": {
+    "サポート": "支援",
+    "近接": "近战",
+    "遠隔": "远程"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/QuestDetail/EnemyPower/TextTitle": {
+    "推奨戦力": "推荐战力"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/SD/1/SD_Local_08/RootUI/Base/Content/Info/NotPossible/Label/Text": {
+    "出撃制限": "出击限制"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/SD/1/SD_Local_09/RootUI/Base/Content/Info/NotPossible/Label/Text": {
+    "出撃制限": "出击限制"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/SD/1/SD_Local_10/RootUI/Base/Content/Info/NotPossible/Label/Text": {
+    "出撃制限": "出击限制"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/SD/2/SD_Local_06/RootUI/Base/Content/Info/NotPossible/Label/Text": {
+    "出撃制限": "出击限制"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/SD/2/SD_Local_07/RootUI/Base/Content/Info/NotPossible/Label/Text": {
+    "出撃制限": "出击限制"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/SD/3/SD_Local_03/RootUI/Base/Content/Info/NotPossible/Label/Text": {
+    "出撃制限": "出击限制"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/SD/3/SD_Local_04/RootUI/Base/Content/Info/NotPossible/Label/Text": {
+    "出撃制限": "出击限制"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/SD/3/SD_Local_05/RootUI/Base/Content/Info/NotPossible/Label/Text": {
+    "出撃制限": "出击限制"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/SD/4/SD_Local_01/RootUI/Base/Content/Info/NotPossible/Label/Text": {
+    "出撃制限": "出击限制"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/SD/4/SD_Local_02/RootUI/Base/Content/Info/NotPossible/Label/Text": {
+    "出撃制限": "出击限制"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/SD_ButtonSet/Button_Party/RootUI/Parts/Text": {
+    "キャラクター編成": "角色编成"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/UnitList/Filter/BaseSkill/RootUI/Parts/Text": {
+    "基地スキル": "基地技能"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/UnitList/Filter/Intercept/RootUI/Parts/Text": {
+    "迎撃型": "迎击型"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/UnitList/Filter/Obstacle/RootUI/Parts/Text": {
+    "障害物型": "障碍物型"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/UnitList/Filter/Support/RootUI/Parts/Text": {
+    "支援型": "支援型"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/UnitList/Filter/Trap/RootUI/Parts/Text": {
+    "罠型": "陷阱型"
+  },
+  "DisasterParty/UICanvas/RootUI/UIGroup/Top/UnitList/Filter/Wall/RootUI/Parts/Text": {
+    "壁上型": "壁上型"
   }
 }
