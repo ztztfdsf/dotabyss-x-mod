@@ -34,6 +34,8 @@
     <Reference Include="Il2CppInterop.Common"><HintPath>$(LoaderDir)\Il2CppInterop.Common.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="Il2Cppmscorlib"><HintPath>$(InteropDir)\Il2Cppmscorlib.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="UnityEngine.CoreModule"><HintPath>$(InteropDir)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime"><HintPath>$(InteropDir)\\Unity.RenderPipelines.Core.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppLive2D.Cubism"><HintPath>$(InteropDir)\\Il2CppLive2D.Cubism.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="Il2CppProject"><HintPath>$(InteropDir)\Il2CppProject.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="Il2CppAbsf"><HintPath>$(InteropDir)\Il2CppAbsf.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="UnityEngine.UI"><HintPath>$(InteropDir)\UnityEngine.UI.dll</HintPath><Private>false</Private></Reference>

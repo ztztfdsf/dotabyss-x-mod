@@ -2,79 +2,164 @@ using System;
 using HarmonyLib;
 using MelonLoader;
 using UnityEngine;
-using Il2CppProject.Novel;
+using Il2CppLive2D.Cubism.Rendering;
 
 namespace UIDumpMod
 {
     /// <summary>
-    /// 动态 CG（Live2D 剧情）程序马赛克消除层。
+    /// 去码 v10（五路专家大会 · grok 方案，interop 类面已核对）：
     ///
-    /// 游戏机制（Il2CppProject.Novel.NovelLive2DController，interop 元数据实证）：
-    ///   CacheMosaics()  扫 Live2D 模型里名字含 Mosaic 的 drawable，缓存其网格
-    ///   _mosaicCamera   专用相机把模型拍到低分辨率 render target 上（MosaicPixelDivX/Y 降采样）
-    ///   _mosaicMeshes   用降采样结果当贴图的网格叠加层 —— 这就是屏幕上那层码
-    ///   每帧 Update/LateUpdate 会刷新，OnBeginCameraRendering 回调驱动相机渲染
+    /// 【机制定案】码 = 模型自带的 Mosaic_XX / MosaicInsted_XX drawable，
+    /// 由 CubismRenderController.OnLateUpdate → OnDynamicDrawableData →
+    /// CubismRenderer.OnDrawableVisiblityDidChange(true) 每帧重新点亮，
+    /// 用 renderer 自己的 Abyss/Live2DMosaicV2 材质实例 grab 屏幕像素化画出。
     ///
-    /// AbyssMod 的 DisableMosaic 只 SetActive(false) 了名字 Mosaic 开头的 drawable，
-    /// 罩不住这套相机-网格管线（其贴图是相机实拍的，跟 drawable 无关）。
+    /// v8 失败根因：Update prefix 里关 renderer，Cubism 在 LateUpdate（绘制前）
+    /// 把 enabled 写回去；且模型异步加载后不一定在 _canvasRoot 下。
     ///
-    /// 修法（两层）：
-    ///   1) CacheMosaics prefix 返回 false —— 缓存列表永远是空的，网格无从生成
-    ///   2) Setup postfix 兜底 —— 万一别处已初始化，把 _mosaicCamera 禁用 +
-    ///      _isMosaicCacheInit 置 true（防后续再补缓存）
+    /// 【v10 打法】不扫场景、不动相机、不动材质参数：
+    ///   ① prefix 拦 OnDrawableVisiblityDidChange：码层 return false（跳过原方法，
+    ///      BecomeVisible 不执行，renderer 不被重新点亮）
+    ///   ② prefix 拦 OnDrawableVertexPositionsDidChange：码层 return false
+    ///      （网格顶点不再更新 = 就算残留一次也画不出正确位置）
+    ///   ③ CubismRenderController.OnLateUpdate postfix 兜底：把 Renderers 数组里
+    ///      码层的 MeshRenderer.enabled=false + GameObject.SetActive(false)
+    ///   ④ 首次命中打点日志 + mosaic_vis.txt 探针（grok 的探针一并带上）
+    ///
+    /// 判定（不靠场景树）：GameObject 名以 "Mosaic" 开头（覆盖 MosaicInsted）
+    /// 或 renderer 材质 shader 名含 "Live2DMosaic"。
     /// </summary>
     public static class MosaicHooks
     {
-        internal static bool Enabled = true; // 待挂 cfg 开关（当前跟随 AbyssMod DynamicMosaic=false 语义：默认全关）
+        internal static bool Enabled = true;
+
+        private static bool _logNovel, _logTitle, _visLogged;
+        private static int _neutralized;
+        private static readonly int GrabId = Shader.PropertyToID("_grabEffectValue");
+
+        // 判定缓存：instanceID → 是否码层（CubismRenderer 生命周期内不变）
+        private static readonly System.Collections.Generic.Dictionary<int, bool> _isMosaicCache = new();
 
         public static void Apply(HarmonyLib.Harmony harmony, MelonLogger.Instance log)
         {
             int ok = 0, fail = 0;
+
+            void TryPatch(string name, System.Reflection.MethodBase target, HarmonyMethod? prefix = null, HarmonyMethod? postfix = null)
+            {
+                if (target == null) { fail++; log.Warning($"[Mosaic] {name}: target not found"); return; }
+                try { harmony.Patch(target, prefix, postfix); ok++; }
+                catch (Exception e) { fail++; log.Warning($"[Mosaic] {name}: {e.Message}"); }
+            }
+
+            // ★ 核心：可见性回写拦截
+            TryPatch("CubismRenderer.OnDrawableVisiblityDidChange",
+                AccessTools.Method(typeof(CubismRenderer), "OnDrawableVisiblityDidChange"),
+                prefix: new HarmonyMethod(typeof(MosaicHooks), nameof(BlockMosaicVis)));
+
+            // ★ 顶点更新拦截（双保险）
+            TryPatch("CubismRenderer.OnDrawableVertexPositionsDidChange",
+                AccessTools.Method(typeof(CubismRenderer), "OnDrawableVertexPositionsDidChange"),
+                prefix: new HarmonyMethod(typeof(MosaicHooks), nameof(BlockMosaicVertex)));
+
+            // ★ 兜底：控制器 LateUpdate 后把码层 renderer 全关
+            TryPatch("CubismRenderController.OnLateUpdate",
+                AccessTools.Method(typeof(CubismRenderController), "OnLateUpdate"),
+                postfix: new HarmonyMethod(typeof(MosaicHooks), nameof(KillAfterLateUpdate)));
+
+            log.Msg($"[Mosaic] v10 hooks: {ok} ok, {fail} failed");
+        }
+
+        // ---------- 判定 ----------
+
+        private static bool IsMosaic(CubismRenderer r)
+        {
+            if (r == null) return false;
             try
             {
-                // ① 主修：CacheMosaics 是私有实例方法，跳过它
-                var t = typeof(NovelLive2DController);
-                var cm = AccessTools.Method(t, "CacheMosaics");
-                if (cm != null)
+                int id = r.GetInstanceID();
+                if (_isMosaicCache.TryGetValue(id, out var cached)) return cached;
+                bool result = false;
+                try
                 {
-                    harmony.Patch(cm, prefix: new HarmonyMethod(typeof(MosaicHooks), nameof(SkipCache)));
-                    ok++;
+                    var go = r.gameObject;
+                    if (go != null && go.name.StartsWith("Mosaic", StringComparison.Ordinal)) result = true;
+                    if (!result)
+                    {
+                        var mat = r.Material; // renderer 自己的材质实例（非泛型 getter）
+                        if (mat != null && mat.shader != null && mat.shader.name.Contains("Live2DMosaic")) result = true;
+                    }
                 }
-                else { fail++; log.Warning("[Mosaic] CacheMosaics not found"); }
+                catch { }
+                _isMosaicCache[id] = result;
+                return result;
+            }
+            catch { return false; }
+        }
 
-                // ② 兜底：Setup 完成后掐相机
-                var setup = AccessTools.Method(t, "Setup");
-                if (setup != null)
+        // ---------- ① 可见性拦截 ----------
+
+        private static bool BlockMosaicVis(CubismRenderer __instance, bool isVisible)
+        {
+            if (!Enabled) return true;
+            bool isM = IsMosaic(__instance);
+            if (isM && isVisible)
+            {
+                Off(__instance, "vis");
+                return false; // 跳过原方法：BecomeVisible 不执行
+            }
+            return true;
+        }
+
+        // ---------- ② 顶点更新拦截 ----------
+
+        private static bool BlockMosaicVertex(CubismRenderer __instance)
+        {
+            if (!Enabled) return true;
+            if (IsMosaic(__instance)) return false; // 顶点不更新
+            return true;
+        }
+
+        // ---------- ③ LateUpdate 后兜底 ----------
+
+        private static void KillAfterLateUpdate(CubismRenderController __instance)
+        {
+            if (!Enabled || __instance == null) return;
+            try
+            {
+                var rs = __instance.Renderers; // Il2CppReferenceArray<CubismRenderer>
+                if (rs == null) return;
+                int n = rs.Length;
+                for (int i = 0; i < n; i++)
                 {
-                    harmony.Patch(setup, postfix: new HarmonyMethod(typeof(MosaicHooks), nameof(KillMosaicCamera)));
-                    ok++;
+                    var r = rs[i];
+                    if (r == null) continue;
+                    if (IsMosaic(r)) Off(r, "late");
                 }
-                else { fail++; log.Warning("[Mosaic] Setup not found"); }
             }
             catch (Exception e)
             {
-                fail++;
-                log.Warning("[Mosaic] hook failed: " + e.Message);
+                if (!_visLogged) { _visLogged = true; MelonLogger.Warning("[Mosaic] late err: " + e.Message); }
             }
-            log.Msg($"[Mosaic] dynamic-CG mosaic hooks: {ok} ok, {fail} failed");
         }
 
-        /// <summary>CacheMosaics prefix：直接跳过（返回 false 不执行原方法）。</summary>
-        private static void SkipCache() { }
-
-        /// <summary>Setup postfix：禁用马赛克相机 + 标记已初始化（防补缓存）。</summary>
-        private static void KillMosaicCamera(NovelLive2DController __instance)
+        private static void Off(CubismRenderer r, string src)
         {
-            if (!Enabled) return;
             try
             {
-                var cam = __instance._mosaicCamera;
-                if (cam != null && cam.gameObject != null)
-                    cam.gameObject.SetActive(false);
-                __instance._isMosaicCacheInit = true; // 骗过「未初始化」检查，别再触发缓存
-                MelonLogger.Msg("[Mosaic] mosaic camera disabled on " + __instance.gameObject.name);
+                bool did = false;
+                var mr = r.MeshRenderer;
+                if (mr != null && mr.enabled) { mr.enabled = false; did = true; }
+                var go = r.gameObject;
+                if (go != null && go.activeSelf) { go.SetActive(false); did = true; }
+                if (did)
+                {
+                    _neutralized++;
+                    if (_neutralized <= 10 || _neutralized % 100 == 0)
+                        MelonLogger.Msg($"[Mosaic] killed #{_neutralized} [{src}] {r.name}");
+                }
             }
-            catch (Exception e) { MelonLogger.Warning("[Mosaic] kill camera err: " + e.Message); }
+            catch { }
         }
+
     }
 }
