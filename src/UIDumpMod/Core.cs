@@ -75,6 +75,7 @@ namespace UIDumpMod
         {
             Table = LoadTable();
             TextHooks.Apply(new HarmonyLib.Harmony("com.ztztfdsf.uidump"), LoggerInstance);
+            MosaicHooks.Apply(new HarmonyLib.Harmony("com.ztztfdsf.mosaic"), LoggerInstance);
             if (Table != null)
                 LoggerInstance.Msg($"UIDumpMod table: exact={Table.ExactPathCount} suffix={Table.SuffixPathCount} patterns={Table.PatternPathCount} global={Table.GlobalCount}");
         }
