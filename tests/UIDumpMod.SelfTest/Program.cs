@@ -63,6 +63,21 @@ Check("路径命中优先于全局", G2("A/Some/Path", "ショップ"), "路径�
 Check("路径 miss 落到全局?（否：全局是独立兕底层）", G2("A/Other", "ショップ"), null);
 Check("全局未知文本", GG("未知の文言"), null);
 
+// ---------- 分隔符归一化（2026-11-16 好感度弹窗根因）----------
+var sepTable = UiTextTable.FromJson(JsonSerializer.Serialize(new Dictionary<string, Dictionary<string, string>>
+{
+    ["__global__"] = new() { ["キャラクターストーリーが解放されました。<br>閲覧しますか？"] = "角色剧情已解锁。<br>要观看吗？" },
+    ["Popup_A/Text"] = new() { ["先行文本<br>后缀"] = "先行文本（br形态）" },
+    ["Popup_B/Text"] = new() { ["先行文本\n后缀"] = "先行文本（换行形态）" },
+}));
+string S(string text) => sepTable.TryTranslateGlobal(text, out var r) ? r : null;
+string SP(string path, string text) => sepTable.TryTranslate(path, text, out var r) ? r : null;
+Check("归一: 表<br> 运行时真换行 → 命中", S("キャラクターストーリーが解放されました。\n閲覧しますか？"), "角色剧情已解锁。<br>要观看吗？");
+Check("归一: 表<br> 运行时<br> → 精确命中", S("キャラクターストーリーが解放されました。<br>閲覧しますか？"), "角色剧情已解锁。<br>要观看吗？");
+Check("归一: 表换行 运行时<br> → 命中（路径层）", SP("X/Popup_B/Text", "先行文本<br>后缀"), "先行文本（换行形态）");
+Check("归一: 表<br> 运行时换行 → 命中（路径层）", SP("X/Popup_A/Text", "先行文本\n后缀"), "先行文本（br形态）");
+Check("归一: 无分隔符不误命中", S("无分隔符文本"), null);
+
 // ---------- 碎片级翻译（真实游戏文本） ----------
 string F(string s) => FragmentTranslator.TryTranslate(s, out var r) ? r : null;
 Check("碎片: 代码+HP", F("<color=#FFD700>アビスコード獲得</color>\n<color=#FF4444>HP40%減少</color>"),

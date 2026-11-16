@@ -24,7 +24,7 @@ namespace UIDumpMod.Translation
     {
         public const string GlobalKey = "__global__";
 
-        private sealed class PathEntry
+        public sealed class PathEntry
         {
             public Dictionary<string, string> Texts;
             public List<TemplatePattern> Patterns; // 无模板时为 null
@@ -112,6 +112,10 @@ namespace UIDumpMod.Translation
             if (g.Patterns != null)
                 foreach (var p in g.Patterns)
                     if (p.TryTranslate(text, out result)) return true;
+            // 2026-11-16 根因修复：表 key 的分隔符形态与运行时不一致时 miss。
+            // TMP 的 text 可能是字面 "<br>"（prefab 序列化）或真实换行（代码拼接 set_text）。
+            // 表里两种形态都存在。归一化两个方向各重试一次（含 Trim 变体）。
+            if (SepNormalize.TryMatch(g, text, out result)) return true;
             return false;
         }
 
@@ -124,6 +128,7 @@ namespace UIDumpMod.Translation
             if (e.Patterns != null)
                 foreach (var p in e.Patterns)
                     if (p.TryTranslate(text, out result)) return true;
+            if (SepNormalize.TryMatch(e, text, out result)) return true; // 分隔符形态归一
             return false;
         }
     }
